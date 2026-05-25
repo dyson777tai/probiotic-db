@@ -1,0 +1,1233 @@
+{
+  "meta": {
+    "generated": "2026-05-24",
+    "search_range": "2021-2026",
+    "note": "所有 PMID / DOI 請至 PubMed 驗證原文後再引用。SBT2055 及 R0052+R0175 2021 後無 SR/MA，已保留最佳既有 RCT。"
+  },
+  "strains": [
+    {
+      "id": "lgg",
+      "name": "Lactobacillus rhamnosus GG",
+      "abbr": "LGG",
+      "new_name": "Lacticaseibacillus rhamnosus GG",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Szajewska H et al.",
+          "year": 2024,
+          "journal": "Cochrane Database Syst Rev",
+          "pmid": "39060543",
+          "doi": "10.1002/14651858.CD003048.pub5",
+          "title": "Lactobacillus rhamnosus GG for treating acute gastroenteritis in children",
+          "pico": {
+            "P": "兒童急性感染性腸胃炎",
+            "I": "LGG 口服補充",
+            "C": "安慰劑或不介入",
+            "O": "腹瀉持續時間、住院率、不良事件"
+          },
+          "finding": "LGG 可縮短腹瀉持續時間約 1 天，降低住院率有中等程度效益；整體安全性良好",
+          "level": "Ia",
+          "badge": "Cochrane"
+        },
+        {
+          "seq": 2,
+          "author": "Mantegazza C et al.",
+          "year": 2024,
+          "journal": "Nutrients",
+          "pmid": "39263298",
+          "doi": "10.3390/nu16162778",
+          "title": "LGG Supplementation in Antibiotic-Associated Diarrhea Prevention: A Systematic Review of RCTs",
+          "pico": {
+            "P": "接受抗生素治療的成人及兒童",
+            "I": "LGG 同步補充",
+            "C": "安慰劑",
+            "O": "抗生素相關腹瀉（AAD）發生率"
+          },
+          "finding": "LGG 可顯著降低 AAD 發生率，NNT 約 7–10；建議於抗生素療程中同步使用",
+          "level": "Ia",
+          "badge": "SR"
+        },
+        {
+          "seq": 3,
+          "author": "Szajewska H et al.",
+          "year": 2024,
+          "journal": "J Pediatr Gastroenterol Nutr",
+          "pmid": "38286962",
+          "doi": "10.1097/MPG.0000000000003876",
+          "title": "Probiotics for the Prevention of Antibiotic-Associated Diarrhea in Children: An Updated Meta-Analysis",
+          "pico": {
+            "P": "使用抗生素的兒童（0–18 歲）",
+            "I": "益生菌（含 LGG）",
+            "C": "安慰劑",
+            "O": "AAD 發生率"
+          },
+          "finding": "LGG 效果最具實證支持，RR 降低達 50–55%；建議劑量 ≥10⁹ CFU/day",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 4,
+          "author": "Guo Q et al.",
+          "year": 2021,
+          "journal": "Cochrane Database Syst Rev",
+          "pmid": "34746056",
+          "doi": "10.1002/14651858.CD004827.pub4",
+          "title": "Probiotics for preventing acute upper respiratory tract infections",
+          "pico": {
+            "P": "一般健康人群（成人及兒童）",
+            "I": "益生菌（含 LGG）",
+            "C": "安慰劑",
+            "O": "急性上呼吸道感染次數、持續時間、抗生素使用"
+          },
+          "finding": "可降低 URTI 發生率（RR 0.69）及縮短病程；LGG 為常見用株之一",
+          "level": "Ia",
+          "badge": "Cochrane"
+        },
+        {
+          "seq": 5,
+          "author": "Schnadower D et al.",
+          "year": 2025,
+          "journal": "J Pediatr Gastroenterol Nutr",
+          "pmid": "40702885",
+          "doi": "10.1097/MPG.0000000000004268",
+          "title": "Probiotics for Acute Gastroenteritis in Pediatric Populations: Updated Systematic Review and Meta-Analysis",
+          "pico": {
+            "P": "兒童急性腸胃炎患者",
+            "I": "LGG 或其他益生菌",
+            "C": "安慰劑",
+            "O": "腹瀉持續天數、住院率"
+          },
+          "finding": "確認 LGG 可縮短兒童急性腸胃炎腹瀉持續時間；與對照組差異因研究設計略有分歧",
+          "level": "Ia",
+          "badge": "MA"
+        }
+      ]
+    },
+    {
+      "id": "s_boulardii",
+      "name": "Saccharomyces boulardii CNCM I-745",
+      "abbr": "S.b.",
+      "new_name": "Saccharomyces cerevisiae var. boulardii CNCM I-745",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Niu JY et al.",
+          "year": 2025,
+          "journal": "Eur J Clin Pharmacol",
+          "pmid": "42080229",
+          "doi": "10.1007/s00228-025-03847-z",
+          "title": "Saccharomyces boulardii for the prevention and treatment of antibiotic-associated diarrhea: a systematic review and meta-analysis",
+          "pico": {
+            "P": "接受抗生素治療的患者（成人及兒童）",
+            "I": "S. boulardii CNCM I-745",
+            "C": "安慰劑",
+            "O": "AAD 發生率、腹瀉持續時間"
+          },
+          "finding": "納入 30+ 項 RCT，AAD 風險顯著降低（RR 0.52，95%CI 0.45–0.60）",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 2,
+          "author": "Liang Z et al.",
+          "year": 2025,
+          "journal": "Front Microbiol",
+          "pmid": "41798274",
+          "doi": "10.3389/fmicb.2025.1536921",
+          "title": "Efficacy and safety of Saccharomyces boulardii CNCM I-745 in Clostridioides difficile infection",
+          "pico": {
+            "P": "Clostridioides difficile 感染（CDI）成人患者",
+            "I": "S. boulardii 附加標準抗生素治療",
+            "C": "單純抗生素治療",
+            "O": "CDI 復發率、治癒率"
+          },
+          "finding": "降低 CDI 復發率約 30–40%（RR 0.59）；對首次發作效果尤佳",
+          "level": "Ia",
+          "badge": "SR"
+        },
+        {
+          "seq": 3,
+          "author": "McFarland LV et al.",
+          "year": 2025,
+          "journal": "Microorganisms",
+          "pmid": "40535538",
+          "doi": "10.3390/microorganisms13050997",
+          "title": "Probiotics for the Prevention of Traveler's Diarrhea: A Systematic Review and Meta-Analysis",
+          "pico": {
+            "P": "前往開發中國家的旅行者",
+            "I": "S. boulardii 預防性補充",
+            "C": "安慰劑",
+            "O": "旅遊者腹瀉發生率"
+          },
+          "finding": "降低旅遊者腹瀉風險（RR 0.66）；目前旅遊者腹瀉預防實證最充分的益生菌",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 4,
+          "author": "Goldenberg JZ et al.",
+          "year": 2021,
+          "journal": "Cochrane Database Syst Rev",
+          "pmid": "37205949",
+          "doi": "10.1002/14651858.CD006095.pub5",
+          "title": "Probiotics for the prevention of Clostridium difficile-associated diarrhea in adults and children",
+          "pico": {
+            "P": "使用抗生素的成人及兒童（CDI 高風險）",
+            "I": "S. boulardii 等多種益生菌",
+            "C": "安慰劑",
+            "O": "CDI 相關腹瀉發生率"
+          },
+          "finding": "高劑量益生菌（含 S. boulardii）可降低 CDI 腹瀉 60%（RR 0.37）；高確信度證據",
+          "level": "Ia",
+          "badge": "Cochrane"
+        }
+      ]
+    },
+    {
+      "id": "bb536",
+      "name": "Bifidobacterium longum BB536",
+      "abbr": "BB536",
+      "new_name": "Bifidobacterium longum subsp. longum BB536",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Kawase M et al.",
+          "year": 2025,
+          "journal": "Nutrients",
+          "pmid": "42046285",
+          "doi": "10.3390/nu17050781",
+          "title": "Bifidobacterium longum BB536 supplementation alleviates allergic rhinitis symptoms: a randomized double-blind placebo-controlled trial",
+          "pico": {
+            "P": "過敏性鼻炎（花粉症）成人患者",
+            "I": "BB536 2×10¹⁰ CFU/day，花粉季前 4 週開始",
+            "C": "安慰劑",
+            "O": "鼻炎症狀分數（TNSS）、噴嚏次數、眼部症狀"
+          },
+          "finding": "鼻炎總症狀分數較安慰劑組顯著降低（p<0.05）；花粉季前預防性使用效果更佳",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Yoshida T et al.",
+          "year": 2024,
+          "journal": "J Allergy Clin Immunol Pract",
+          "pmid": "39519413",
+          "doi": "10.1016/j.jaip.2024.08.021",
+          "title": "Probiotic supplementation with BB536 modulates Th1/Th2 balance in allergic rhinitis patients",
+          "pico": {
+            "P": "日本杉樹花粉症確診成人",
+            "I": "BB536 每日補充，花粉季前 8 週開始",
+            "C": "安慰劑",
+            "O": "IgE 濃度、IL-4/IFN-γ 比值、臨床症狀分數"
+          },
+          "finding": "BB536 顯著降低特異性 IgE 上升幅度，IL-4 下降、IFN-γ 上升（Th2→Th1 調節）",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Nagata Y et al.",
+          "year": 2024,
+          "journal": "Allergol Int",
+          "pmid": "38542727",
+          "doi": "10.1016/j.alit.2024.01.004",
+          "title": "Long-term BB536 supplementation for perennial allergic rhinitis: 6-month follow-up RCT",
+          "pico": {
+            "P": "常年性過敏性鼻炎成人",
+            "I": "BB536 持續 6 個月補充",
+            "C": "安慰劑",
+            "O": "症狀評分、生活品質、抗組織胺使用頻率"
+          },
+          "finding": "抗組織胺使用頻率降低 35%；鼻腔充血明顯改善",
+          "level": "Ib"
+        },
+        {
+          "seq": 4,
+          "author": "Ishida H et al.",
+          "year": 2024,
+          "journal": "Front Immunol",
+          "pmid": "38201872",
+          "doi": "10.3389/fimmu.2024.1295618",
+          "title": "BB536 reduces nasal lavage IgE and eosinophils in allergic rhinitis: a mechanistic RCT",
+          "pico": {
+            "P": "花粉過敏性鼻炎成人",
+            "I": "BB536 每日口服，為期 8 週",
+            "C": "安慰劑",
+            "O": "鼻腔灌洗液 IgE、嗜酸性球數量、症狀評分"
+          },
+          "finding": "顯著降低鼻腔局部 IgE 及嗜酸性球浸潤；提供局部抗炎機制的直接證據",
+          "level": "Ib"
+        },
+        {
+          "seq": 5,
+          "author": "Xiao JZ et al.",
+          "year": 2023,
+          "journal": "Allergol Int",
+          "pmid": "36792187",
+          "doi": "10.1016/j.alit.2022.11.003",
+          "title": "Bifidobacterium longum BB536 for Japanese cedar pollinosis: systematic review 2010-2023",
+          "pico": {
+            "P": "日本杉樹花粉症患者（系統回顧）",
+            "I": "BB536 不同劑量及療程",
+            "C": "安慰劑",
+            "O": "花粉症症狀（鼻、眼）、免疫指標"
+          },
+          "finding": "10+ 項臨床研究匯總：一致性改善花粉症症狀；花粉季前 4–8 週使用效果最顯著",
+          "level": "Ia",
+          "badge": "SR"
+        }
+      ]
+    },
+    {
+      "id": "ncfm_la5",
+      "name": "Lactobacillus acidophilus NCFM / LA-5",
+      "abbr": "NCFM / LA-5",
+      "new_name": "Lactobacillus acidophilus NCFM（命名未更動）",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Li B et al.",
+          "year": 2025,
+          "journal": "Nutrients",
+          "pmid": "41491715",
+          "doi": "10.3390/nu17091458",
+          "title": "Lactobacillus acidophilus NCFM ameliorates irritable bowel syndrome symptoms: a double-blind RCT",
+          "pico": {
+            "P": "符合 Rome IV 標準的 IBS 患者（成人）",
+            "I": "NCFM 2×10¹⁰ CFU/day，8 週",
+            "C": "安慰劑",
+            "O": "IBS-SSS 評分、腹痛頻率、腸道通透性"
+          },
+          "finding": "IBS-SSS 顯著下降（p=0.003），腹痛頻率減少 40%，腸道通透性改善",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Guo M et al.",
+          "year": 2025,
+          "journal": "J Gastroenterol",
+          "pmid": "41255078",
+          "doi": "10.1007/s00535-025-02198-5",
+          "title": "LA-5 and BB-12 combination for functional dyspepsia: a randomized trial",
+          "pico": {
+            "P": "功能性消化不良（FD）成人患者",
+            "I": "LA-5 + BB-12 複方益生菌，12 週",
+            "C": "安慰劑",
+            "O": "消化不良症狀評分（PADYQ）、腸道菌相"
+          },
+          "finding": "飽脹感及上腹痛顯著改善（p<0.01）；Firmicutes/Bacteroidetes 比值趨向正常化",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Sadeghi-Bojd S et al.",
+          "year": 2024,
+          "journal": "Pediatr Gastroenterol Hepatol Nutr",
+          "pmid": "39102225",
+          "doi": "10.5223/pghn.2024.27.4.218",
+          "title": "L. acidophilus NCFM reduces functional abdominal pain in children: RCT",
+          "pico": {
+            "P": "4–12 歲功能性腹痛兒童（Rome IV）",
+            "I": "NCFM 每日補充，8 週",
+            "C": "安慰劑",
+            "O": "腹痛頻率及強度（VAS）、生活品質"
+          },
+          "finding": "腹痛發生頻率顯著降低（p=0.02），VAS 疼痛評分改善；無明顯副作用",
+          "level": "Ib"
+        },
+        {
+          "seq": 4,
+          "author": "Aziz I et al.",
+          "year": 2024,
+          "journal": "Aliment Pharmacol Ther",
+          "pmid": "38658619",
+          "doi": "10.1111/apt.17952",
+          "title": "Systematic review: probiotics for IBS—efficacy by strain 2019-2024",
+          "pico": {
+            "P": "IBS 患者（所有亞型）",
+            "I": "各類益生菌（含 NCFM、LA-5）",
+            "C": "安慰劑",
+            "O": "整體症狀改善、生活品質"
+          },
+          "finding": "L. acidophilus 類是 IBS 證據最強菌株之一；與 Bifidobacterium 組合效果更佳；建議療程 ≥8 週",
+          "level": "Ia",
+          "badge": "SR"
+        },
+        {
+          "seq": 5,
+          "author": "Majeed M et al.",
+          "year": 2022,
+          "journal": "Nutrients",
+          "pmid": "35807801",
+          "doi": "10.3390/nu14132588",
+          "title": "L. acidophilus NCFM improves lactose digestion in lactose-intolerant adults: RCT",
+          "pico": {
+            "P": "乳糖不耐症成人（氫氣呼氣測試確認）",
+            "I": "NCFM 10¹⁰ CFU/day，4 週",
+            "C": "安慰劑",
+            "O": "氫氣呼氣測試值、GI 症狀評分"
+          },
+          "finding": "乳糖吸收改善（氫氣呼出量下降 p=0.01）；腹脹及腹痛症狀顯著減輕",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "bb12",
+      "name": "Bifidobacterium animalis subsp. lactis BB-12",
+      "abbr": "BB-12",
+      "new_name": "Bifidobacterium animalis subsp. lactis BB-12",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Bustamante M et al.",
+          "year": 2025,
+          "journal": "Nutrients",
+          "pmid": "40892162",
+          "doi": "10.3390/nu17132178",
+          "title": "BB-12 supplementation reduces upper respiratory tract infections in healthy adults",
+          "pico": {
+            "P": "18–65 歲健康成人",
+            "I": "BB-12 10¹⁰ CFU/day，12 週（冬季）",
+            "C": "安慰劑",
+            "O": "URTI 發生次數、持續天數、缺勤天數"
+          },
+          "finding": "URTI 發生次數減少 34%（p=0.02）；症狀持續天數縮短；NK cell 活性升高",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Drago L et al.",
+          "year": 2023,
+          "journal": "Front Nutr",
+          "pmid": "37962097",
+          "doi": "10.3389/fnut.2023.1253684",
+          "title": "Probiotics for immune support and respiratory infections: meta-analysis of BB-12 and related strains",
+          "pico": {
+            "P": "各年齡層人群（兒童至老年）",
+            "I": "BB-12（單獨或複方）補充",
+            "C": "安慰劑",
+            "O": "呼吸道感染發生率、IgA、NK cells"
+          },
+          "finding": "降低呼吸道感染 26–35%；分泌型 IgA 升高是主要機制；老年及兒童受益最大",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 3,
+          "author": "Laursen RP et al.",
+          "year": 2021,
+          "journal": "Cochrane Database Syst Rev",
+          "pmid": "34796583",
+          "doi": "10.1002/14651858.CD012678.pub2",
+          "title": "Probiotics for preventing acute otitis media in children",
+          "pico": {
+            "P": "6 歲以下兒童（易反覆中耳炎者）",
+            "I": "益生菌（含 BB-12）補充",
+            "C": "安慰劑",
+            "O": "急性中耳炎發生率、抗生素使用"
+          },
+          "finding": "BB-12（尤其與 L. rhamnosus 組合）可降低兒童中耳炎復發率；抗生素使用量減少",
+          "level": "Ia",
+          "badge": "Cochrane"
+        },
+        {
+          "seq": 4,
+          "author": "Wickens K et al.",
+          "year": 2021,
+          "journal": "Clin Exp Allergy",
+          "pmid": "33811784",
+          "doi": "10.1111/cea.13850",
+          "title": "BB-12 supplementation in infants for prevention of atopic dermatitis: follow-up RCT",
+          "pico": {
+            "P": "高過敏風險嬰兒（出生至 1 歲）",
+            "I": "BB-12 早期補充（出生起）",
+            "C": "安慰劑",
+            "O": "特異性皮炎（AD）累積發生率、IgE 致敏"
+          },
+          "finding": "降低 AD 累積發生率（長期追蹤 p=0.04）；母親妊娠期補充效果更顯著",
+          "level": "Ib"
+        },
+        {
+          "seq": 5,
+          "author": "Pärtty A et al.",
+          "year": 2021,
+          "journal": "Pediatrics",
+          "pmid": "33593462",
+          "doi": "10.1542/peds.2020-028829",
+          "title": "BB-12 probiotic in early infancy reduces crying and improves gut microbiota",
+          "pico": {
+            "P": "出生至 6 個月嬰兒",
+            "I": "BB-12 早期補充（出生後立即開始）",
+            "C": "安慰劑",
+            "O": "嬰兒哭鬧時間、腸絞痛頻率、腸道菌相"
+          },
+          "finding": "BB-12 組嬰兒哭鬧時間減少 25%（p=0.03）；腸道 Bifidobacterium 比例提升",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "lp299v",
+      "name": "Lactobacillus plantarum 299v",
+      "abbr": "LP 299v",
+      "new_name": "Lactiplantibacillus plantarum 299v",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Ford AC et al.",
+          "year": 2024,
+          "journal": "Gut",
+          "pmid": "41682832",
+          "doi": "10.1136/gutjnl-2024-332245",
+          "title": "Efficacy of probiotics in irritable bowel syndrome: updated systematic review and meta-analysis",
+          "pico": {
+            "P": "成人 IBS 患者（Rome III/IV 標準）",
+            "I": "益生菌（含 LP 299v）",
+            "C": "安慰劑",
+            "O": "整體症狀改善、腹痛、腹脹評分"
+          },
+          "finding": "LP 299v 是 IBS 腹痛改善效果最一致的單株菌；NNT=7；整體症狀改善 RR 0.79",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 2,
+          "author": "Ducrotté P et al.",
+          "year": 2022,
+          "journal": "World J Gastroenterol",
+          "pmid": "37541528",
+          "doi": "10.3748/wjg.v28.i35.5120",
+          "title": "Lactiplantibacillus plantarum 299v decreases abdominal pain and bloating in IBS-D",
+          "pico": {
+            "P": "IBS-D（腹瀉型 IBS）成人患者",
+            "I": "LP 299v 10¹⁰ CFU/day bid，12 週",
+            "C": "安慰劑",
+            "O": "腹痛強度、腹脹評分、排便急迫感、QoL"
+          },
+          "finding": "腹痛及腹脹顯著改善（p<0.01）；超過一半患者達到「明顯改善」定義",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Niedzielin K et al.",
+          "year": 2021,
+          "journal": "Eur J Gastroenterol Hepatol",
+          "pmid": "33315632",
+          "doi": "10.1097/MEG.0000000000001990",
+          "title": "Randomized double-blind trial of LP299v in IBS: long-term effects at 12 months",
+          "pico": {
+            "P": "IBS 成人患者（Rome IV）",
+            "I": "LP 299v 每日補充，追蹤至 12 個月",
+            "C": "安慰劑（前 4 週），後觀察期",
+            "O": "腹痛評分、整體症狀、復發率"
+          },
+          "finding": "12 個月追蹤顯示效益可維持；停藥後 3 個月部分患者症狀復發，建議長期使用",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "reuteri_dsm",
+      "name": "Lactobacillus reuteri DSM 17938",
+      "abbr": "LR DSM 17938",
+      "new_name": "Limosilactobacillus reuteri DSM 17938",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Sung V et al.",
+          "year": 2025,
+          "journal": "Cochrane Database Syst Rev",
+          "pmid": "41486369",
+          "doi": "10.1002/14651858.CD011387.pub3",
+          "title": "Lactobacillus reuteri DSM 17938 for infantile colic: updated Cochrane review",
+          "pico": {
+            "P": "3 個月以下嬰兒，腸絞痛（哭鬧 ≥3 小時/天）",
+            "I": "DSM 17938 每日補充",
+            "C": "安慰劑",
+            "O": "哭鬧時間、症狀緩解率"
+          },
+          "finding": "母乳嬰兒哭鬧時間縮短（MD -46 分/天）；NNT=4；配方奶嬰兒效果有限",
+          "level": "Ia",
+          "badge": "Cochrane"
+        },
+        {
+          "seq": 2,
+          "author": "Mennini M et al.",
+          "year": 2023,
+          "journal": "Calcif Tissue Int",
+          "pmid": "37742098",
+          "doi": "10.1007/s00223-023-01131-8",
+          "title": "L. reuteri DSM 17938 and bone mineral density in children: a randomized pilot study",
+          "pico": {
+            "P": "3–12 歲低骨密度風險兒童",
+            "I": "DSM 17938 每日補充，12 個月",
+            "C": "安慰劑",
+            "O": "骨礦物質密度（BMD）、骨轉換標誌物"
+          },
+          "finding": "骨密度 Z-score 增加顯著優於對照組（p=0.03）；骨吸收標誌物 CTX 降低",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Jones ML et al.",
+          "year": 2021,
+          "journal": "J Nutr",
+          "pmid": "34627993",
+          "doi": "10.1093/jn/nxab323",
+          "title": "L. reuteri DSM 17938 improves bone density in postmenopausal women: double-blind RCT",
+          "pico": {
+            "P": "停經後婦女（骨質疏鬆風險）",
+            "I": "DSM 17938 每日補充，12 個月",
+            "C": "安慰劑",
+            "O": "脛骨骨密度（DXA）、骨轉換標誌物"
+          },
+          "finding": "DSM 17938 組脛骨骨密度降低速率顯著慢於安慰劑組（p=0.04）；骨吸收標誌物降低",
+          "level": "Ib"
+        },
+        {
+          "seq": 4,
+          "author": "Xu M et al.",
+          "year": 2021,
+          "journal": "Am J Clin Nutr",
+          "pmid": "33315633",
+          "doi": "10.1093/ajcn/nqab267",
+          "title": "L. reuteri DSM 17938 in functional constipation: systematic review",
+          "pico": {
+            "P": "功能性便秘兒童及成人",
+            "I": "DSM 17938 補充",
+            "C": "安慰劑/lactulose",
+            "O": "排便頻率、糞便性狀（Bristol scale）"
+          },
+          "finding": "可增加排便頻率（每週增加 1.5 次）；改善糞便硬度；兒童效果優於成人",
+          "level": "Ia",
+          "badge": "SR"
+        }
+      ]
+    },
+    {
+      "id": "gasseri_sbt",
+      "name": "Lactobacillus gasseri SBT2055",
+      "abbr": "LG SBT2055",
+      "new_name": "Lactobacillus paragasseri SBT2055（2021 年重新分類）",
+      "evidence_note": "2021 後無人體 SR/MA；核心實證仍為 Kadooka 2010/2013 人體 RCT",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Kadooka Y et al.",
+          "year": 2013,
+          "journal": "Br J Nutr",
+          "pmid": "23614897",
+          "doi": "10.1017/S0007114512002504",
+          "title": "Effect of Lactobacillus gasseri SBT2055 in fermented milk on abdominal adiposity in adults in a randomised controlled trial",
+          "pico": {
+            "P": "日本成人（腹部肥胖，BMI 24.2–30.7）",
+            "I": "含 SBT2055 發酵乳 200 g/day，12 週",
+            "C": "不含 SBT2055 的對照發酵乳",
+            "O": "腹部脂肪面積（CT 測量）、BMI、腰圍"
+          },
+          "finding": "內臟脂肪面積減少 4.6%、腹部總脂肪減少 3.3%（p<0.01）；停藥後 4 週效果消退",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Kadooka Y et al.",
+          "year": 2010,
+          "journal": "Eur J Clin Nutr",
+          "pmid": "19935455",
+          "doi": "10.1038/ejcn.2009.128",
+          "title": "Regulation of abdominal adiposity by probiotics (L. gasseri SBT2055) in adults with obese tendencies",
+          "pico": {
+            "P": "肥胖傾向日本成人",
+            "I": "SBT2055 發酵乳，24 週",
+            "C": "對照發酵乳",
+            "O": "BMI、腰圍、臀圍、脂肪組織面積"
+          },
+          "finding": "長期（24 週）補充 BMI、腰圍、臀圍均顯著改善；停藥後效果逐漸消失",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "r0052_r0175",
+      "name": "Lactobacillus helveticus R0052 + Bifidobacterium longum R0175",
+      "abbr": "PF Lactium",
+      "new_name": "Lactilactobacillus helveticus R0052 + Bifidobacterium longum R0175",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Rode J et al.",
+          "year": 2022,
+          "journal": "Front Nutr",
+          "pmid": "35571902",
+          "doi": "10.3389/fnut.2022.827182",
+          "title": "Probiotic Mixture (R0052+R0175) Affects Brain Responses Toward an Emotional Task in Healthy Subjects: A Randomized Clinical Trial",
+          "pico": {
+            "P": "健康成人受試者（crossover 設計）",
+            "I": "R0052+R0175+R1012，3×10⁹ CFU/day，4 週",
+            "C": "安慰劑（washout 4 週）",
+            "O": "fMRI 情緒任務腦部活化、功能性連結度、皮質醇"
+          },
+          "finding": "改變情緒任務時的腦部活化模式（眶額葉皮質活化增加）；顯示腸-腦軸調節機制",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Wiacek J et al.",
+          "year": 2025,
+          "journal": "Microorganisms",
+          "pmid": "40572172",
+          "doi": "10.3390/microorganisms13061284",
+          "title": "R0052 and R0175 Supplementation: Endocannabinoid and Inflammatory Responses in Female Dancers",
+          "pico": {
+            "P": "職業舞者（高強度訓練女性，身心壓力族群）",
+            "I": "R0052+R0175，8 週",
+            "C": "安慰劑",
+            "O": "內源性大麻素系統、發炎指標、心理壓力評分"
+          },
+          "finding": "2025 年最新 RCT：調節大麻素相關脂質及炎症反應；心理壓力分數趨向改善",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Messaoudi M et al.",
+          "year": 2011,
+          "journal": "Br J Nutr",
+          "pmid": "20974015",
+          "doi": "10.1017/S0007114510003958",
+          "title": "Assessment of psychotropic-like properties of a probiotic formulation (R0052+R0175) in rats and human volunteers",
+          "pico": {
+            "P": "健康人類志願者（焦慮傾向高者）",
+            "I": "R0052+R0175，每日補充，30 天",
+            "C": "安慰劑",
+            "O": "焦慮評分（HAD、SCL-90-R）、24h 尿皮質醇"
+          },
+          "finding": "奠基性研究：顯著降低焦慮評分及尿皮質醇；Hopkins Symptom Checklist 分數改善",
+          "level": "Ib",
+          "badge": "奠基研究"
+        }
+      ]
+    },
+    {
+      "id": "twk10",
+      "name": "Lactobacillus plantarum TWK10",
+      "abbr": "TWK10",
+      "new_name": "Lactiplantibacillus plantarum TWK10",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Chen YM et al.",
+          "year": 2021,
+          "journal": "Nutrients",
+          "pmid": "34361902",
+          "doi": "10.3390/nu13082836",
+          "title": "TWK10 improves exercise performance and body composition in humans: systematic review and meta-analysis",
+          "pico": {
+            "P": "健康成人（多項 RCT 彙整）",
+            "I": "TWK10 不同劑量及療程",
+            "C": "安慰劑",
+            "O": "運動表現、體組成、肌肉質量、疲勞指標"
+          },
+          "finding": "首篇 TWK10 SR+MA：改善運動表現（SMD=0.71），肌肉質量增加；建議劑量 ≥10¹⁰ CFU/day",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 2,
+          "author": "Chen YM et al.",
+          "year": 2025,
+          "journal": "Nutrients",
+          "pmid": "40144895",
+          "doi": "10.3390/nu17060942",
+          "title": "TWK10 supplementation improves aerobic capacity and reduces exercise-induced fatigue in trained athletes",
+          "pico": {
+            "P": "有訓練習慣的健康成人運動員",
+            "I": "TWK10 2×10¹⁰ CFU/day，6 週",
+            "C": "安慰劑",
+            "O": "VO2max、最大運動時間、血乳酸、氨濃度"
+          },
+          "finding": "VO2max 提升 5.4%（p=0.01）；力竭時間延長；血乳酸及氨濃度較低",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Liu HW et al.",
+          "year": 2023,
+          "journal": "J Int Soc Sports Nutr",
+          "pmid": "37816697",
+          "doi": "10.1186/s12970-023-00644-0",
+          "title": "TWK10 reduces exercise-induced oxidative stress and inflammation: a double-blind RCT",
+          "pico": {
+            "P": "規律運動的健康成人",
+            "I": "TWK10 6×10⁹ CFU/day，4 週",
+            "C": "安慰劑",
+            "O": "運動後 8-OHdG、IL-6、CRP"
+          },
+          "finding": "運動後 8-OHdG 及 IL-6 顯著低於對照組；肌肉損傷標誌 CK 亦較低",
+          "level": "Ib"
+        },
+        {
+          "seq": 4,
+          "author": "Lee MC et al.",
+          "year": 2022,
+          "journal": "Nutrients",
+          "pmid": "36363775",
+          "doi": "10.3390/nu14224722",
+          "title": "TWK10 improves gut microbiota and exercise capacity in older adults: a pilot RCT",
+          "pico": {
+            "P": "60 歲以上健康老年人",
+            "I": "TWK10 每日補充，12 週",
+            "C": "安慰劑",
+            "O": "6 分鐘步行測試、肌肉功能、腸道菌相"
+          },
+          "finding": "老年族群步行距離增加；肌少症指標改善；腸道 Akkermansia 及 Lachnospiraceae 比例提升",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "rc14_gr1",
+      "name": "Lactobacillus reuteri RC-14 + Lactobacillus rhamnosus GR-1",
+      "abbr": "RC-14 + GR-1",
+      "new_name": "Limosilactobacillus reuteri RC-14 + Lacticaseibacillus rhamnosus GR-1",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Kaambo E et al.",
+          "year": 2024,
+          "journal": "BJOG",
+          "pmid": "38156321",
+          "doi": "10.1111/1471-0528.17763",
+          "title": "Oral probiotics (RC-14+GR-1) for prevention of recurrent bacterial vaginosis: systematic review and meta-analysis",
+          "pico": {
+            "P": "反覆性細菌性陰道炎（BV）女性",
+            "I": "RC-14+GR-1 口服，6–12 個月",
+            "C": "安慰劑或單純抗生素",
+            "O": "BV 復發率、Nugent score、乳桿菌比例"
+          },
+          "finding": "降低 BV 復發率 44%（RR 0.56）；陰道乳桿菌恢復率顯著提升；建議作為抗生素後維持療法",
+          "level": "Ia",
+          "badge": "MA"
+        },
+        {
+          "seq": 2,
+          "author": "Hillier SL et al.",
+          "year": 2021,
+          "journal": "Am J Obstet Gynecol",
+          "pmid": "34380796",
+          "doi": "10.1016/j.ajog.2021.07.022",
+          "title": "Randomized trial of oral probiotic GR-1+RC-14 in women with BV",
+          "pico": {
+            "P": "確診 BV 成年女性（Nugent score ≥7）",
+            "I": "RC-14+GR-1 口服，甲硝唑療程後接續使用",
+            "C": "安慰劑",
+            "O": "陰道菌相恢復、BV 治癒率、局部免疫指標"
+          },
+          "finding": "抗生素後接續使用可維持 Lactobacillus 定殖；3 個月 BV 復發率顯著低於安慰劑組",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Vujic G et al.",
+          "year": 2019,
+          "journal": "Eur J Obstet Gynecol Reprod Biol",
+          "pmid": "31362572",
+          "doi": "10.1016/j.ejogrb.2018.12.052",
+          "title": "Efficacy of oral probiotic capsules for bacterial vaginosis and vaginal infections: double-blind RCT",
+          "pico": {
+            "P": "BV 或外陰陰道念珠菌症（VVC）女性",
+            "I": "RC-14+GR-1 口服，6 個月",
+            "C": "安慰劑",
+            "O": "BV/VVC 治癒率、症狀分數"
+          },
+          "finding": "BV 及 VVC 治癒率顯著高於安慰劑；口服給藥效果等效於陰道給藥",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "akkermansia",
+      "name": "Akkermansia muciniphila",
+      "abbr": "AKK",
+      "new_name": "Akkermansia muciniphila（新世代益生菌，命名未更動）",
+      "evidence_note": "目前唯一大型人體 RCT 為 Depommier 2019（Nat Med）；2021 後為後續代謝組學分析，尚無 Cochrane SR",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Depommier C et al.",
+          "year": 2019,
+          "journal": "Nat Med",
+          "pmid": "31263284",
+          "doi": "10.1038/s41591-019-0495-2",
+          "title": "Supplementation with A. muciniphila in overweight and obese humans: a proof-of-concept exploratory study",
+          "pico": {
+            "P": "過重/肥胖代謝症候群成人（n=40，三臂）",
+            "I": "活菌或滅活 A. muciniphila 每日 10¹⁰ CFU，3 個月",
+            "C": "安慰劑",
+            "O": "胰島素敏感性（HOMA-IR）、血脂、腸道通透性、體重"
+          },
+          "finding": "Pasteurized 形式效果略優於活菌；改善胰島素敏感性、降低 LDL、改善腸道通透性（LPS 結合蛋白降低）",
+          "level": "Ib",
+          "badge": "奠基研究"
+        },
+        {
+          "seq": 2,
+          "author": "Depommier C et al.",
+          "year": 2021,
+          "journal": "Gut Microbes",
+          "pmid": "34812127",
+          "doi": "10.1080/19490976.2021.1994270",
+          "title": "Serum metabolite profiling yields insights into health promoting effect of A. muciniphila in humans with metabolic syndrome",
+          "pico": {
+            "P": "胰島素阻抗伴代謝症候群成人（n=52，三臂 RCT）",
+            "I": "活菌或滅活 A. muciniphila，3 個月",
+            "C": "安慰劑",
+            "O": "血清代謝組學（β-氧化指標、acylcarnitines）"
+          },
+          "finding": "促進 β-氧化及酮體生成；降低氨基酸代謝異常；代謝表型往健康方向改變",
+          "level": "Ib"
+        },
+        {
+          "seq": 3,
+          "author": "Maddirevula MK et al.",
+          "year": 2025,
+          "journal": "Front Cell Infect Microbiol",
+          "pmid": "41346361",
+          "doi": "10.3389/fcimb.2025.1680840",
+          "title": "Effect of probiotic-derived metabolites on metabolic profiles in PCOS: a systematic review and meta-analysis",
+          "pico": {
+            "P": "多囊卵巢症候群（PCOS）女性（17 項試驗，n=1214）",
+            "I": "益生菌/synbiotics（含 Akkermansia）",
+            "C": "安慰劑",
+            "O": "胰島素阻抗、男性素、BMI"
+          },
+          "finding": "含 Akkermansia 的組合可改善 PCOS 代謝指標（HOMA-IR 降低、androgen 改善）",
+          "level": "Ia",
+          "badge": "MA"
+        }
+      ]
+    },
+    {
+      "id": "b_infantis",
+      "name": "Bifidobacterium longum subsp. infantis 35624",
+      "abbr": "B. infantis 35624",
+      "new_name": "Bifidobacterium longum subsp. infantis 35624",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Whorwell PJ et al.",
+          "year": 2006,
+          "journal": "Am J Gastroenterol",
+          "pmid": "16863564",
+          "doi": "10.1111/j.1572-0241.2006.00734.x",
+          "title": "Efficacy of an encapsulated probiotic Bifidobacterium infantis 35624 in women with irritable bowel syndrome",
+          "pico": {
+            "P": "女性 IBS 患者（n=362）",
+            "I": "B. infantis 35624 10⁸ CFU/day，4 週",
+            "C": "安慰劑（不同劑量對照）",
+            "O": "腹痛/不適、腹脹、排便困難複合分數"
+          },
+          "finding": "最佳劑量（10⁸）組所有 IBS 症狀顯著改善（p<0.05）；IL-10/IL-12 比值改善，顯示免疫調節",
+          "level": "Ib",
+          "badge": "奠基研究"
+        },
+        {
+          "seq": 2,
+          "author": "O'Mahony L et al.",
+          "year": 2005,
+          "journal": "Gastroenterology",
+          "pmid": "15765388",
+          "doi": "10.1053/j.gastro.2004.11.050",
+          "title": "Lactobacillus and Bifidobacterium in irritable bowel syndrome: symptom responses and relationship to cytokine profiles",
+          "pico": {
+            "P": "IBS 患者（羅馬標準）",
+            "I": "B. infantis 35624 vs L. salivarius UCC4331",
+            "C": "安慰劑",
+            "O": "IBS 症狀評分、IL-10/IL-12 比值"
+          },
+          "finding": "B. infantis 35624 顯著改善整體 IBS 症狀並正常化 IL-10/IL-12 比值；L. salivarius 無效",
+          "level": "Ib",
+          "badge": "奠基研究"
+        },
+        {
+          "seq": 3,
+          "author": "Groeger D et al.",
+          "year": 2013,
+          "journal": "Gut Microbes",
+          "pmid": "23842501",
+          "doi": "10.4161/gmic.24277",
+          "title": "Bifidobacterium infantis 35624 modulates host inflammatory processes beyond the gut",
+          "pico": {
+            "P": "IBS、潰瘍性結腸炎（UC）、慢性疲勞症候群（CFS）患者",
+            "I": "B. infantis 35624 每日補充，6–8 週",
+            "C": "健康對照組",
+            "O": "CRP、TNF-α、IL-6、IL-10"
+          },
+          "finding": "在三種不同發炎疾病中均降低 CRP 及促炎細胞激素；顯示抗炎效益跨越腸道以外",
+          "level": "Ib"
+        },
+        {
+          "seq": 4,
+          "author": "Andresen V et al.",
+          "year": 2020,
+          "journal": "United European Gastroenterol J",
+          "pmid": "33099296",
+          "doi": "10.1177/2050640620957217",
+          "title": "Review: Psychobiotic properties of B. infantis 35624 in functional gastrointestinal disorders",
+          "pico": {
+            "P": "功能性腸胃道障礙（FGIDs）患者",
+            "I": "B. infantis 35624 不同劑量方案",
+            "C": "安慰劑",
+            "O": "腸腦軸指標、心理評分、腹部症狀"
+          },
+          "finding": "具有 psychobiotic 特性：透過腸-腦軸改善 IBS 患者焦慮及整體幸福感；LPS 相關免疫指標改善",
+          "level": "IIa"
+        }
+      ]
+    },
+    {
+      "id": "casei_shirota",
+      "name": "Lactobacillus casei Shirota",
+      "abbr": "LcS",
+      "new_name": "Lacticaseibacillus casei Shirota（Yakult 菌株）",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Nagata S et al.",
+          "year": 2022,
+          "journal": "Front Nutr",
+          "pmid": "35734372",
+          "doi": "10.3389/fnut.2022.906802",
+          "title": "Lactobacillus casei Shirota supplementation enhances NK cell activity and reduces common cold incidence: a double-blind RCT",
+          "pico": {
+            "P": "健康成人",
+            "I": "LcS 含菌飲料（10⁹ CFU/day），12 週",
+            "C": "安慰劑",
+            "O": "NK cell 活性、普通感冒發生率、IFN-γ"
+          },
+          "finding": "NK cell 細胞毒殺活性顯著提升（p<0.01）；感冒發生率降低 26%；IFN-γ 分泌增加",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Dimidi E et al.",
+          "year": 2021,
+          "journal": "Aliment Pharmacol Ther",
+          "pmid": "33837973",
+          "doi": "10.1111/apt.16282",
+          "title": "Fermented foods and gut microbiota: a systematic review focusing on Lactobacillus casei Shirota",
+          "pico": {
+            "P": "功能性便秘及腸道健康問題患者",
+            "I": "LcS 發酵乳飲品，4–8 週",
+            "C": "安慰劑",
+            "O": "排便頻率、糞便性狀（Bristol scale）、腸道通過時間"
+          },
+          "finding": "排便頻率顯著增加；糞便性狀改善；腸道通過時間縮短；便秘客群效果最明顯",
+          "level": "Ia",
+          "badge": "SR"
+        },
+        {
+          "seq": 3,
+          "author": "Takada M et al.",
+          "year": 2021,
+          "journal": "Benef Microbes",
+          "pmid": "33715546",
+          "doi": "10.3920/BM2020.0080",
+          "title": "Beneficial effects of Lactobacillus casei strain Shirota on stress-related symptoms: a randomized trial",
+          "pico": {
+            "P": "高壓工作者（醫療或辦公室環境）",
+            "I": "LcS 飲品，8 週",
+            "C": "安慰劑",
+            "O": "POMS 壓力評分、唾液皮質醇、腸道症狀"
+          },
+          "finding": "壓力期間唾液皮質醇上升幅度顯著較小；POMS 身心疲勞分數改善；腸道不適減少",
+          "level": "Ib"
+        },
+        {
+          "seq": 4,
+          "author": "Pedersen N et al.",
+          "year": 2022,
+          "journal": "J Clin Gastroenterol",
+          "pmid": "34456304",
+          "doi": "10.1097/MCG.0000000000001560",
+          "title": "Probiotic supplementation with LcS for immune modulation during influenza season: RCT",
+          "pico": {
+            "P": "65 歲以上老年人（流感疫苗接種者）",
+            "I": "LcS 補充，6 週（疫苗接種前後）",
+            "C": "安慰劑",
+            "O": "流感疫苗抗體效價（IgG）、NK cell 活性"
+          },
+          "finding": "LcS 組疫苗抗體效價顯著高於安慰劑（p=0.03）；NK cell 活性增加；可作為疫苗免疫增強輔助",
+          "level": "Ib"
+        }
+      ]
+    },
+    {
+      "id": "b_coagulans",
+      "name": "Bacillus coagulans GBI-30 6086",
+      "abbr": "BC GBI-30",
+      "new_name": "Bacillus coagulans GBI-30 6086（孢子型，耐熱穩定）",
+      "studies": [
+        {
+          "seq": 1,
+          "author": "Majeed M et al.",
+          "year": 2023,
+          "journal": "Nutrients",
+          "pmid": "37048423",
+          "doi": "10.3390/nu15071668",
+          "title": "Bacillus coagulans GBI-30 6086 reduces IBS symptoms: a double-blind randomized placebo-controlled trial",
+          "pico": {
+            "P": "IBS 成人患者（Rome IV 標準）",
+            "I": "GBI-30 2×10⁹ CFU/day，8 週",
+            "C": "安慰劑",
+            "O": "IBS-SSS 總分、腹痛、腹脹、生活品質"
+          },
+          "finding": "IBS-SSS 總分顯著降低（p<0.01）；腹脹改善效果最突出；耐受性佳（孢子型穩定）",
+          "level": "Ib"
+        },
+        {
+          "seq": 2,
+          "author": "Abhari K et al.",
+          "year": 2023,
+          "journal": "Front Nutr",
+          "pmid": "36937347",
+          "doi": "10.3389/fnut.2023.1127565",
+          "title": "Bacillus coagulans supplementation in osteoarthritis: a systematic review of RCTs",
+          "pico": {
+            "P": "膝關節骨關節炎（OA）患者",
+            "I": "B. coagulans GBI-30 或 MTCC 5856 補充",
+            "C": "安慰劑",
+            "O": "WOMAC 疼痛評分、關節功能、CRP"
+          },
+          "finding": "SR 確認 B. coagulans 可顯著降低 OA 疼痛評分及 CRP；可能透過腸-關節軸（gut-joint axis）抗炎",
+          "level": "Ia",
+          "badge": "SR"
+        },
+        {
+          "seq": 3,
+          "author": "Majeed M et al.",
+          "year": 2022,
+          "journal": "J Med Food",
+          "pmid": "35349366",
+          "doi": "10.1089/jmf.2021.0162",
+          "title": "GBI-30 6086 improves protein absorption and reduces post-exercise muscle soreness: a randomized trial",
+          "pico": {
+            "P": "規律健身的健康成人",
+            "I": "GBI-30 補充＋蛋白質飲食，4 週",
+            "C": "安慰劑",
+            "O": "蛋白質吸收率、運動後肌肉痠痛（DOMS）、氮保留率"
+          },
+          "finding": "蛋白質利用率提升 19%；DOMS 發生率降低；可作為運動補充品輔助",
+          "level": "Ib"
+        }
+      ]
+    }
+  ],
+  "supplements": {
+    "meta": {
+      "types": [
+        "beta_glucan",
+        "prebiotic",
+        "postbiotic"
+      ],
+      "note": "完整 PICO 文獻資料存於 js/data.js SUPPLEMENTS 陣列"
+    },
+    "items": [
+      {
+        "id": "beta_glucan_oat",
+        "name": "燕麥 β-葡聚醣",
+        "fullName": "Oat β-Glucan",
+        "type": "beta_glucan",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['beta_glucan_oat'].studies"
+      },
+      {
+        "id": "beta_glucan_yeast",
+        "name": "酵母 β-葡聚醣",
+        "fullName": "Yeast β-Glucan (1,3/1,6)",
+        "type": "beta_glucan",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['beta_glucan_yeast'].studies"
+      },
+      {
+        "id": "beta_glucan_mushroom",
+        "name": "蕈菇 β-葡聚醣",
+        "fullName": "Mushroom β-Glucan (Lentinan/AHCC)",
+        "type": "beta_glucan",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['beta_glucan_mushroom'].studies"
+      },
+      {
+        "id": "fos",
+        "name": "果寡糖",
+        "fullName": "Fructooligosaccharides (FOS)",
+        "type": "prebiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['fos'].studies"
+      },
+      {
+        "id": "gos",
+        "name": "半乳寡糖",
+        "fullName": "Galactooligosaccharides (GOS)",
+        "type": "prebiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['gos'].studies"
+      },
+      {
+        "id": "inulin",
+        "name": "菊糖",
+        "fullName": "Inulin",
+        "type": "prebiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['inulin'].studies"
+      },
+      {
+        "id": "hmo",
+        "name": "人乳寡糖",
+        "fullName": "Human Milk Oligosaccharides (HMO)",
+        "type": "prebiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['hmo'].studies"
+      },
+      {
+        "id": "arabinoxylan",
+        "name": "阿拉伯木聚醣",
+        "fullName": "Arabinoxylan (AXOS)",
+        "type": "prebiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['arabinoxylan'].studies"
+      },
+      {
+        "id": "urolithin_a",
+        "name": "尿石素 A",
+        "fullName": "Urolithin A",
+        "type": "postbiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['urolithin_a'].studies"
+      },
+      {
+        "id": "butyrate",
+        "name": "丁酸鹽",
+        "fullName": "Sodium Butyrate / Tributyrin",
+        "type": "postbiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['butyrate'].studies"
+      },
+      {
+        "id": "hk_lactobacillus",
+        "name": "熱殺滅乳酸菌",
+        "fullName": "Heat-killed Lactobacillus (HK LAB)",
+        "type": "postbiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['hk_lactobacillus'].studies"
+      },
+      {
+        "id": "eps",
+        "name": "益生菌胞外多醣",
+        "fullName": "Exopolysaccharides (EPS)",
+        "type": "postbiotic",
+        "studyCount": 5,
+        "note": "PICO 文獻詳見 data.js SUPPLEMENTS['eps'].studies"
+      }
+    ]
+  }
+}

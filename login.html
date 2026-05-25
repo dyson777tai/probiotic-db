@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登入 · 益生菌資料庫</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0f4a33 0%, #1a6b4a 60%, #2d9b6f 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px 40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+    }
+    .login-logo {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .login-logo .logo-icon { font-size: 52px; display: block; margin-bottom: 10px; }
+    .login-logo h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f4a33;
+      margin-bottom: 4px;
+    }
+    .login-logo p { font-size: 13px; color: #5a7a6a; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a2e24;
+      margin-bottom: 7px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #d4e6da;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      color: #1a2e24;
+    }
+    .form-group input:focus {
+      border-color: #1a6b4a;
+      box-shadow: 0 0 0 3px rgba(26,107,74,0.12);
+    }
+    .btn-login {
+      width: 100%;
+      padding: 13px;
+      background: #1a6b4a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 8px;
+    }
+    .btn-login:hover { background: #0f4a33; }
+    .btn-login:disabled {
+      background: #a0c8b8;
+      cursor: not-allowed;
+    }
+    .error-msg {
+      display: none;
+      background: #fff0f0;
+      border: 1px solid #e63946;
+      color: #e63946;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .error-msg.show { display: block; }
+    .login-footer {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 11px;
+      color: #a0b8ad;
+    }
+    @media (max-width: 480px) {
+      .login-box { padding: 36px 24px 32px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div class="login-logo">
+      <span class="logo-icon">🧫</span>
+      <h1>益生菌資料庫</h1>
+      <p>小戴藥局 · 臨床衛教工具</p>
+    </div>
+
+    <div class="error-msg" id="error-msg">帳號或密碼錯誤，請再試一次。</div>
+
+    <form id="login-form" onsubmit="handleLogin(event)">
+      <div class="form-group">
+        <label for="username">帳號</label>
+        <input type="text" id="username" name="username"
+               placeholder="請輸入帳號"
+               autocomplete="username"
+               autocapitalize="none" required>
+      </div>
+      <div class="form-group">
+        <label for="password">密碼</label>
+        <input type="password" id="password" name="password"
+               placeholder="請輸入密碼"
+               autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn-login" id="login-btn">登入</button>
+    </form>
+
+    <div class="login-footer">僅供授權人員使用 · 資料依 PubMed 文獻建置</div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    // 已登入則直接跳回主頁
+    if (isLoggedIn()) window.location.replace('index.html');
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const btn = document.getElementById('login-btn');
+      const errEl = document.getElementById('error-msg');
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      btn.disabled = true;
+      btn.textContent = '驗證中…';
+      errEl.classList.remove('show');
+
+      const ok = await doLogin(username, password);
+      if (ok) {
+        window.location.replace('index.html');
+      } else {
+        errEl.classList.add('show');
+        btn.disabled = false;
+        btn.textContent = '登入';
+        document.getElementById('password').value = '';
+        document.getElementById('password').focus();
+      }
+    }
+  </script>
+</body>
+</html>

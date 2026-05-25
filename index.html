@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>益生菌資料庫｜小戴藥局</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* 預覽版補丁 */
+    .preview-badge {
+      background: #f0a500; color: #fff; font-size: 11px; font-weight: 700;
+      padding: 2px 8px; border-radius: 4px; margin-left: 8px;
+    }
+    .coming-soon {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      height: 300px; color: #a0b8ad;
+    }
+    .coming-soon .cs-icon { font-size: 52px; margin-bottom: 12px; }
+    .coming-soon p { font-size: 14px; }
+    .strain-mechbox {
+      background: #f0f7f3; border-left: 3px solid #2d9b6f;
+      padding: 10px 14px; border-radius: 0 8px 8px 0;
+      font-size: 13px; line-height: 1.7; margin: 10px 0;
+    }
+    .dose-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+    .dose-chip {
+      background: #e8f4ee; border: 1px solid #b0d8c0;
+      border-radius: 20px; padding: 4px 12px; font-size: 12px; color: #1a6b4a;
+    }
+    .study-num-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px; border-radius: 50%;
+      background: #2d9b6f; color: #fff; font-size: 11px; font-weight: 700;
+      margin-right: 6px; flex-shrink: 0;
+    }
+    .pico-grid { display: grid; grid-template-columns: 36px 1fr; gap: 4px 8px; font-size: 13px; }
+    .pico-l { font-weight: 800; color: #1a6b4a; display: flex; align-items: flex-start; padding-top: 2px; }
+    .pico-v { line-height: 1.6; }
+    .risk-box { border-radius: 8px; padding: 12px 14px; font-size: 13px; line-height: 1.7; }
+    .risk-low  { background: #f0f7f3; border: 1px solid #b0d8c0; }
+    .risk-med  { background: #fff8e6; border: 1px solid #f0c040; }
+    .risk-high { background: #fff0f0; border: 1px solid #e63946; }
+    .combo-card {
+      background: #fff; border: 1.5px solid #d4e6da;
+      border-radius: 12px; padding: 20px; margin-bottom: 16px;
+    }
+    .combo-title { font-size: 16px; font-weight: 700; color: #1a2e24; margin-bottom: 6px; }
+    .combo-target { font-size: 12px; color: #5a7a6a; margin-bottom: 12px; }
+    .combo-section-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.5px; color: #5a7a6a; margin: 8px 0 4px;
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    }
+    .chip-p { background: #e8f4ee; color: #1a6b4a; border: 1px solid #b0d8c0; }
+    .chip-pre { background: #e8f0ff; color: #2d5cc0; border: 1px solid #b0c8f8; }
+    .chip-post { background: #f3e8ff; color: #7b35a8; border: 1px solid #d0a8f0; }
+    .combo-benefit {
+      background: #fff8e6; border-left: 3px solid #f0a500;
+      padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 13px; margin-top: 10px;
+    }
+    .interaction-card {
+      background: #fff; border: 1.5px solid #d4e6da;
+      border-radius: 10px; padding: 16px; margin-bottom: 12px;
+    }
+    .int-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .int-drug { font-weight: 700; font-size: 14px; color: #1a2e24; }
+    .int-detail { font-size: 13px; line-height: 1.7; color: #3a5a4a; }
+    .matcher-steps { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+    .step-dot {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: #5a7a6a;
+    }
+    .step-dot .num {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: #d4e6da; color: #1a6b4a; display: flex;
+      align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; flex-shrink: 0;
+    }
+    .step-dot.active .num { background: #1a6b4a; color: #fff; }
+    .product-add-form {
+      background: #fff; border: 1.5px solid #d4e6da;
+      border-radius: 12px; padding: 24px; max-width: 560px;
+    }
+    .product-add-form h4 { font-size: 16px; font-weight: 700; color: #1a2e24; margin-bottom: 16px; }
+    .fn-list { font-size: 12px; color: #5a7a6a; }
+    .fn-list li { padding: 3px 0; }
+    /* --- HOMEPAGE --- */
+    .home-hero {
+      background: linear-gradient(135deg, #1a6b4a 0%, #0f4a33 100%);
+      border-radius: 16px; padding: 32px 36px; color: #fff; margin-bottom: 28px;
+    }
+    .home-hero h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+    .home-hero p { opacity: 0.85; font-size: 14px; line-height: 1.7; }
+    .home-hero .hero-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .home-hero .hero-badge {
+      background: rgba(255,255,255,0.2); color: #fff;
+      padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== MOBILE TOPBAR ===== -->
+<div class="mobile-topbar">
+  <button class="hamburger-btn" id="hamburger-btn" onclick="toggleSidebar()" aria-label="選單">☰</button>
+  <span class="mobile-topbar-title">🧫 益生菌資料庫</span>
+</div>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- ===== SIDEBAR ===== -->
+<nav id="sidebar">
+  <div class="logo">
+    <h1>🧫 益生菌資料庫</h1>
+    <p>小戴藥局 · 臨床衛教工具</p>
+  </div>
+  <nav>
+    <div class="nav-group-label">主選單</div>
+    <a href="#" class="active" onclick="showPage('home',this)">
+      <span class="icon">🏠</span> 首頁
+    </a>
+    <a href="#" onclick="showPage('strains',this)">
+      <span class="icon">🧫</span> 益生菌百科
+    </a>
+    <a href="#" onclick="showPage('functional',this)">
+      <span class="icon">🎯</span> 功能分類
+    </a>
+    <a href="#" onclick="showPage('supplements',this)">
+      <span class="icon">🛡️</span> 免疫輔助品
+    </a>
+    <div class="nav-group-label">臨床工具</div>
+    <a href="#" onclick="showPage('interactions',this)">
+      <span class="icon">💊</span> 藥物交互作用
+    </a>
+    <a href="#" onclick="showPage('combos',this)">
+      <span class="icon">🔗</span> 複方協同組合
+    </a>
+    <a href="#" onclick="showPage('matcher',this)">
+      <span class="icon">🎯</span> 客戶需求配對
+    </a>
+    <div class="nav-group-label">分析工具</div>
+    <a href="#" onclick="showPage('compare',this)">
+      <span class="icon">⚖️</span> 菌株比較表
+    </a>
+    <div class="nav-group-label">藥局管理</div>
+    <a href="#" onclick="showPage('products',this)">
+      <span class="icon">🏪</span> 我的產品庫
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <span id="sidebar-user" style="display:block;margin-bottom:6px;color:#8aaa99;"></span>
+    v2.0 · 2026-05-25<br>
+    文獻均需至 PubMed 驗證<br>
+    <button onclick="logout()" style="margin-top:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#b0c8bc;border-radius:6px;padding:5px 12px;font-size:11px;cursor:pointer;width:100%;">登出</button>
+  </div>
+</nav>
+
+<!-- ===== MAIN ===== -->
+<div id="main">
+
+  <!-- 首頁 -->
+  <div id="page-home" class="page active">
+    <div class="home-hero">
+      <h3>益生菌臨床衛教資料庫</h3>
+      <p>涵蓋菌株百科 × PICO 文獻 × 免疫輔助品 × 8 大功能分類<br>
+         依據 Cochrane SR、PubMed Meta-Analysis 最新 2021–2026 年實證建置</p>
+      <div class="hero-badges">
+        <span class="hero-badge">🛡️ 免疫調節</span>
+        <span class="hero-badge">🌸 過敏改善</span>
+        <span class="hero-badge">🫀 腸胃道保健</span>
+        <span class="hero-badge">🌙 睡眠壓力</span>
+        <span class="hero-badge">💪 運動表現</span>
+        <span class="hero-badge">⚖️ 體重管理</span>
+        <span class="hero-badge">🌺 私密處健康</span>
+      </div>
+    </div>
+    <div class="home-stats" id="home-stats">
+      <!-- 由 JS 動態計算 -->
+    </div>
+    <h3 style="font-size:16px;font-weight:700;color:#1a2e24;margin-bottom:14px;">快速入口</h3>
+    <div class="quick-links">
+      <div class="quick-link-card" onclick="showPage('strains',null)">
+        <div class="ql-icon">🧫</div>
+        <h4>益生菌百科</h4>
+        <p>搜尋菌株、查看 PICO 文獻與劑量建議</p>
+      </div>
+      <div class="quick-link-card" onclick="showPage('matcher',null)">
+        <div class="ql-icon">🎯</div>
+        <h4>客戶需求配對</h4>
+        <p>依客人症狀快速推薦最適菌株</p>
+      </div>
+      <div class="quick-link-card" onclick="showPage('interactions',null)">
+        <div class="ql-icon">💊</div>
+        <h4>藥物交互作用</h4>
+        <p>抗生素、免疫抑制劑、抗黴菌藥注意事項</p>
+      </div>
+      <div class="quick-link-card" onclick="showPage('combos',null)">
+        <div class="ql-icon">🔗</div>
+        <h4>複方協同組合</h4>
+        <p>8 組實證複方配方與劑量建議</p>
+      </div>
+      <div class="quick-link-card" onclick="showPage('products',null)">
+        <div class="ql-icon">🏪</div>
+        <h4>我的產品庫</h4>
+        <p>新增藥局產品，自動連結菌株資料</p>
+      </div>
+      <div class="quick-link-card" onclick="showPage('functional',null)">
+        <div class="ql-icon">🎯</div>
+        <h4>功能分類</h4>
+        <p>睡眠、運動、減脂、過敏等 8 大分類</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 益生菌百科 -->
+  <div id="page-strains" class="page">
+    <div class="page-header">
+      <h2>🧫 益生菌百科</h2>
+      <p>15 個菌株 · 共 56 篇 PICO 格式臨床文獻（2021–2026）</p>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="strain-search" placeholder="搜尋菌株名稱、縮寫、功能..." oninput="filterStrains(this.value)">
+      <select id="strain-cat-filter" onchange="filterStrains(document.getElementById('strain-search').value)">
+        <option value="">全部功能分類</option>
+        <option value="immune">🛡️ 免疫調節</option>
+        <option value="allergy">🌸 過敏改善</option>
+        <option value="gi">🫀 腸胃道保健</option>
+        <option value="sleep">🌙 睡眠壓力</option>
+        <option value="sports">💪 運動表現</option>
+        <option value="weight">⚖️ 體重管理</option>
+        <option value="vaginal">🌺 私密處健康</option>
+        <option value="pediatric">👶 嬰幼兒</option>
+      </select>
+    </div>
+    <div class="strain-grid" id="strain-grid">
+      <!-- 由 JS 動態產生 -->
+      <div style="color:#5a7a6a;font-size:14px;padding:20px;">載入中...</div>
+    </div>
+  </div>
+
+  <!-- 功能分類 -->
+  <div id="page-functional" class="page">
+    <div class="page-header">
+      <h2>🎯 功能分類</h2>
+      <p>依需求快速找到對應菌株與成分</p>
+    </div>
+    <div class="func-grid" id="func-grid">
+      <!-- 由 JS 動態產生 -->
+    </div>
+  </div>
+
+  <!-- 免疫輔助品 -->
+  <div id="page-supplements" class="page">
+    <div class="page-header">
+      <h2>🛡️ 免疫輔助品</h2>
+      <p>Beta-葡聚醣（β-Glucan）· 益生元（Prebiotics）· 後生元（Postbiotics）</p>
+    </div>
+    <div class="search-bar">
+      <select id="supp-type-filter" onchange="filterSupplements(this.value)">
+        <option value="">全部類型</option>
+        <option value="beta_glucan">Beta-葡聚醣</option>
+        <option value="prebiotic">益生元（Prebiotics）</option>
+        <option value="postbiotic">後生元（Postbiotics）</option>
+      </select>
+    </div>
+    <div class="strain-grid" id="supp-grid">
+      <!-- 由 JS 動態產生 -->
+    </div>
+  </div>
+
+  <!-- 藥物交互作用 -->
+  <div id="page-interactions" class="page">
+    <div class="page-header">
+      <h2>💊 藥物交互作用</h2>
+      <p>使用益生菌時需注意的藥物相互作用與臨床建議</p>
+    </div>
+    <div id="interaction-list">
+      <!-- 由 JS 動態產生 -->
+    </div>
+  </div>
+
+  <!-- 複方協同組合 -->
+  <div id="page-combos" class="page">
+    <div class="page-header">
+      <h2>🔗 複方協同組合</h2>
+      <p>8 組實證協同配方 · 包含益生菌、益生元、後生元的最佳搭配</p>
+    </div>
+    <div id="combos-list">
+      <!-- 由 JS 動態產生 -->
+    </div>
+  </div>
+
+  <!-- 客戶需求配對 -->
+  <div id="page-matcher" class="page">
+    <div class="page-header">
+      <h2>🎯 客戶需求配對</h2>
+      <p>依客人需求快速推薦最適菌株與產品</p>
+    </div>
+    <div class="matcher-steps">
+      <div class="step-dot active"><div class="num">1</div> 填寫需求</div>
+      <div style="color:#ccc;align-self:center;">→</div>
+      <div class="step-dot"><div class="num">2</div> 查看推薦</div>
+      <div style="color:#ccc;align-self:center;">→</div>
+      <div class="step-dot"><div class="num">3</div> 對應產品</div>
+    </div>
+    <div class="matcher-form">
+      <div class="form-group">
+        <label>主要需求（可複選）</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="immune"> 🛡️ 容易感冒、免疫力差</label>
+          <label><input type="checkbox" value="allergy"> 🌸 過敏性鼻炎、花粉症、皮膚過敏</label>
+          <label><input type="checkbox" value="gi"> 🫀 腸胃不適（IBS、腹瀉、便秘、脹氣）</label>
+          <label><input type="checkbox" value="sleep"> 🌙 睡眠困難、壓力大、焦慮</label>
+          <label><input type="checkbox" value="sports"> 💪 運動表現、肌肉恢復</label>
+          <label><input type="checkbox" value="weight"> ⚖️ 體重管理、代謝症候群</label>
+          <label><input type="checkbox" value="vaginal"> 🌺 私密處保健（BV / 念珠菌）</label>
+          <label><input type="checkbox" value="pediatric"> 👶 嬰幼兒健康（腸絞痛、過敏預防）</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>特殊考量</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" value="antibiotic"> 正在服用抗生素</label>
+          <label><input type="checkbox" value="immunocomp"> 免疫低下 / 自體免疫疾病</label>
+          <label><input type="checkbox" value="pregnant"> 懷孕 / 哺乳中</label>
+          <label><input type="checkbox" value="elderly"> 65 歲以上老年人</label>
+        </div>
+      </div>
+      <button class="btn btn-primary" onclick="runMatcher()">🔍 配對推薦</button>
+    </div>
+    <div id="matcher-results" style="margin-top:24px;"></div>
+  </div>
+
+  <!-- 我的產品庫 -->
+  <div id="page-products" class="page">
+    <div class="page-header">
+      <h2>🏪 我的產品庫</h2>
+      <p>新增藥局益生菌產品，自動連結到對應菌株資料</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:24px;align-items:start;flex-wrap:wrap;">
+      <div class="product-add-form">
+        <h4>➕ 新增產品</h4>
+        <div class="form-group">
+          <label>產品名稱</label>
+          <input type="text" id="prod-name" placeholder="例：益暢菌 Plus">
+        </div>
+        <div class="form-group">
+          <label>品牌 / 廠商</label>
+          <input type="text" id="prod-brand" placeholder="例：○○藥廠">
+        </div>
+        <div class="form-group">
+          <label>對應菌株（可複選）</label>
+          <select id="prod-strains" multiple style="height:120px;">
+            <!-- 由 JS 動態產生 -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label>主要功能分類</label>
+          <select id="prod-category">
+            <option value="immune">🛡️ 免疫調節</option>
+            <option value="allergy">🌸 過敏改善</option>
+            <option value="gi">🫀 腸胃道保健</option>
+            <option value="sleep">🌙 睡眠壓力</option>
+            <option value="sports">💪 運動表現</option>
+            <option value="weight">⚖️ 體重管理</option>
+            <option value="vaginal">🌺 私密處健康</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>CFU 含量（每劑）</label>
+          <input type="text" id="prod-cfu" placeholder="例：10¹⁰ CFU">
+        </div>
+        <div class="form-group">
+          <label>零售價（NTD）</label>
+          <input type="text" id="prod-price" placeholder="例：980">
+        </div>
+        <div class="form-group">
+          <label>備註</label>
+          <input type="text" id="prod-note" placeholder="冷藏保存 / 孕婦適用...">
+        </div>
+        <div style="display:flex;gap:8px;">
+          <button class="btn btn-primary" onclick="addProduct()">儲存產品</button>
+          <button class="btn btn-secondary" onclick="clearProductForm()">清除</button>
+        </div>
+      </div>
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <h4 style="font-size:15px;font-weight:700;color:#1a2e24;">產品清單</h4>
+          <button class="btn btn-secondary" style="font-size:12px;padding:6px 12px;" onclick="exportProducts()">📤 匯出 JSON</button>
+        </div>
+        <div class="product-table-wrap"><table class="product-table" id="product-table">
+          <thead>
+            <tr>
+              <th>產品名稱</th>
+              <th>品牌</th>
+              <th>菌株</th>
+              <th>分類</th>
+              <th>CFU</th>
+              <th>價格</th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody id="product-tbody">
+            <tr>
+              <td colspan="7" style="text-align:center;color:#a0b8ad;padding:24px;">
+                尚未新增產品。左側填寫後按「儲存產品」。
+              </td>
+            </tr>
+          </tbody>
+        </table></div><!-- product-table-wrap -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 菌株交叉比較表 -->
+  <div id="page-compare" class="page">
+    <div class="page-header">
+      <h2>⚖️ 菌株比較表</h2>
+      <p>選擇 2–3 個菌株，快速橫向比對機轉、劑量、文獻強度與適用族群</p>
+    </div>
+    <div id="compare-content">
+      <!-- 由 JS 動態產生 -->
+    </div>
+  </div>
+
+</div><!-- end #main -->
+
+<!-- ===== DETAIL OVERLAY ===== -->
+<div id="detail-overlay" onclick="closeDetail(event)">
+  <div id="detail-panel">
+    <div class="detail-header" id="detail-header">
+      <button class="detail-close" onclick="closeDetailPanel()">✕</button>
+      <h3 id="detail-name">—</h3>
+      <div class="detail-abbr" id="detail-abbr">—</div>
+      <div style="margin-top:8px;" id="detail-tags"></div>
+    </div>
+    <div class="detail-tabs" id="detail-tabs">
+      <div class="detail-tab active" onclick="switchTab('overview',this)">總覽</div>
+      <div class="detail-tab" onclick="switchTab('studies',this)">臨床文獻</div>
+      <div class="detail-tab" onclick="switchTab('dose',this)">劑量用法</div>
+      <div class="detail-tab" onclick="switchTab('risk',this)">風險分析</div>
+    </div>
+    <div class="detail-body" id="detail-body">
+      <!-- 由 JS 動態產生 -->
+    </div>
+  </div>
+</div>
+
+<script src="js/auth.js"></script>
+<script>requireAuth();</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
