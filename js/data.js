@@ -1324,6 +1324,445 @@ const STRAINS = [
       }
     ]
   }
+,
+
+  // ── PS128 (Lactiplantibacillus plantarum PS128) ────────────
+  {
+    id: 'ps128',
+    name: 'Lactiplantibacillus plantarum PS128',
+    abbr: 'PS128',
+    newName: 'Lactiplantibacillus plantarum PS128',
+    icon: '🧠',
+    categories: ['sleep', 'stress'],
+    mechanism: '透過腸-腦軸（Gut-Brain Axis）調節多巴胺（Dopamine）及血清素（Serotonin）合成通路；抑制 HPA 軸過度活化，降低皮質醇（Cortisol）及 ACTH；增加 BDNF（腦源性神經滋養因子）表達；在帕金森氏症動物模型中改善多巴胺神經元存活及紋狀體功能；透過迷走神經路徑傳遞腸道訊號至大腦。首株被系統臨床研究用於情緒障礙、睡眠及神經退化性疾病的 Psychobiotic（精神益生菌）。',
+    standardDose: '3×10⁹–6×10¹⁰ CFU/天；依適應症調整：睡眠障礙 3×10⁹；神經退化性疾病 6×10¹⁰',
+    timing: '睡前服用（配合 HPA 軸皮質醇晝夜節律）',
+    duration: '4–12 週；帕金森氏症輔助需 12 週以上',
+    sideEffects: ['初期可能輕微腸胃適應（脹氣、軟便）', '多數臨床研究不良反應率 <5%'],
+    contraindications: ['重度精神疾病（憂鬱症、思覺失調）不可取代精神科藥物', '帕金森氏症患者使用前需與神經內科醫師討論'],
+    riskAnalysis: '人體研究顯示安全性良好，不良反應發生率低（4–5%），顯著低於 SSRI 藥物（22%）。HK-PS23 熱殺滅形式安全性更高，適合免疫低下族群替代選擇。',
+    autoimmune: false,
+    synergisticWith: ['hk_lactobacillus', 'r0052_r0175'],
+    drugInteractions: ['sleep_meds_additive'],
+    studies: [
+      {
+        seq: 1, author: 'Liu WH et al.', year: 2021,
+        journal: 'Nutrients', pmid: '33842519', doi: '10.3390/nu13041097',
+        title: 'Psychobiotic Supplementation of PS128 Improves Stress, Anxiety, and Insomnia in Highly Stressed Information Technology Specialists: A Pilot Study',
+        pico: {
+          P: '40 名高壓 IT 工程師（PSS ≥14 分，平均年齡 29 歲）',
+          I: 'PS128 10¹⁰ CFU/天，持續 8 週（開放標籤）',
+          C: '無對照（前後測自身比較）',
+          O: 'PSS 壓力量表、GAD-7 焦慮量表、ISI 失眠量表、POMS 情緒量表、血清皮質醇'
+        },
+        finding: 'PSS 壓力分數降低 31%（p<0.001）；GAD-7 焦慮評分降低 40%；ISI 失眠嚴重度明顯改善；血清皮質醇下降；情緒正向指標提升。為 PS128 壓力/焦慮的先驅人體研究。',
+        level: 'IIa', badge: '先驅研究'
+      },
+      {
+        seq: 2, author: 'Tsai YC et al.', year: 2021,
+        journal: 'Nutrients', pmid: '34444980', doi: '10.3390/nu13082820',
+        title: 'Effects of Lactobacillus plantarum PS128 on Depressive Symptoms and Sleep Quality in Self-Reported Insomniacs: A Randomized, Double-Blind, Placebo-Controlled Pilot Trial',
+        pico: {
+          P: '40 名自述失眠成人（20–40 歲，BDI-II ≥14，無精神科診斷）',
+          I: 'PS128 3×10⁹ CFU/天，持續 30 天',
+          C: '安慰劑',
+          O: 'BDI-II 憂鬱評分、PSG 睡眠多項生理檢查、MFI 疲勞量表'
+        },
+        finding: 'PS128 組 BDI-II 憂鬱評分顯著下降（p=0.02）；夜間覺醒頻率降低；高頻 β 波腦波活動減少（提示鎮靜效果）；疲勞感明顯改善；為首個 PS128 睡眠 RCT。',
+        level: 'Ib'
+      },
+      {
+        seq: 3, author: 'Lu CS et al.', year: 2021,
+        journal: 'Front Nutr', pmid: '34249991', doi: '10.3389/fnut.2021.650053',
+        title: 'The Add-On Effect of Lactobacillus plantarum PS128 in Patients With Parkinson\'s Disease: A Pilot Study',
+        pico: {
+          P: '帕金森氏症患者（穩定使用左旋多巴等抗帕金森藥物，n=38）',
+          I: 'PS128 6×10¹⁰ CFU/晚，持續 12 週（合併原有抗帕金森藥物）',
+          C: '自身基準對照（歷史性基準線比較）',
+          O: 'UPDRS 第三部分運動評分、ON/OFF 日記記錄、便秘評估'
+        },
+        finding: 'UPDRS 運動評分改善（p=0.03）；ON 時間增加、OFF 時間縮短；便秘症狀改善；腸道菌相多樣性提升。為全球首項益生菌用於帕金森氏症的前瞻性臨床研究。',
+        level: 'IIa', badge: '帕金森氏症'
+      },
+      {
+        seq: 4, author: 'Chen YH et al.', year: 2022,
+        journal: 'Clin Psychopharmacol Neurosci', pmid: '', doi: '10.9758/cpn.2022.20.3.560',
+        title: 'Clinical Application Value of Lactobacillus Plantarum PS128 in Patients with Anxiety Disorders',
+        pico: {
+          P: '200 名焦慮症患者（DSM-V 診斷，n=100/組）',
+          I: 'PS128 膠囊合併 Citalopram（SSRI）治療，持續 8 週',
+          C: '單純 Citalopram 治療',
+          O: 'Hamilton 焦慮量表（HAMA）、SAS 自評焦慮量表、不良反應發生率'
+        },
+        finding: 'PS128 合用組 HAMA 分數下降速度顯著大於對照組（p=0.03）；不良反應率 PS128 組 4% vs 對照 22%（p<0.001）；合用 SSRI 下 PS128 顯著提升抗焦慮效果並降低藥物副作用。',
+        level: 'Ib'
+      },
+      {
+        seq: 5, author: 'Cheng CM et al.', year: 2021,
+        journal: 'Nutrients', pmid: '34835954', doi: '10.3390/nu13124297',
+        title: 'Randomized Controlled Trial of Probiotic PS128 in Children with Tourette Syndrome',
+        pico: {
+          P: '圖雷特症候群（Tourette Syndrome, TS）兒童（6–18 歲，n=60）',
+          I: 'PS128 3×10¹⁰ CFU/天，持續 8 週',
+          C: '安慰劑',
+          O: 'Yale Global Tic Severity Scale（YGTSS）抽動嚴重度、SNAP-IV、腸道菌相'
+        },
+        finding: 'SNAP-IV 注意力/過動症狀顯著改善（p=0.04）；抽動嚴重度改善趨勢；腸道菌相多樣性提升；Firmicutes/Bacteroidetes 比值降低；為 PS128 在兒童神經精神疾病的重要 RCT。',
+        level: 'Ib'
+      }
+    ]
+  },
+
+  // ── L. reuteri ADR-1 ────────────────────────────────────────
+  {
+    id: 'reuteri_adr1',
+    name: 'Limosilactobacillus reuteri ADR-1',
+    abbr: 'L. reuteri ADR-1',
+    newName: 'Limosilactobacillus reuteri ADR-1',
+    icon: '🩸',
+    categories: ['metabolic', 'weight'],
+    mechanism: '直接作用於胰島 β 細胞（增加胰島素分泌）及腸道 GLP-1 分泌；調節脂多醣（LPS）誘導的慢性低度發炎（降低 TNF-α、IL-6）；改善腸道屏障完整性，降低代謝性內毒素血症（Metabolic Endotoxemia）；增加腸道 Bifidobacterium 豐度，改善整體代謝菌相；與同屬菌株 DSM 17938 共享部分抗炎及代謝調節機轉，但 ADR-1 對 HbA1c 及膽固醇的改善效果在 RCT 中更為顯著。',
+    standardDose: '2×10⁹–10¹⁰ CFU/天',
+    timing: '餐中服用（與食物同服提升存活率）',
+    duration: '12 週以上；糖尿病患者建議長期持續',
+    sideEffects: ['初期輕微腸胃適應（脹氣）', '低血糖風險（合用 Sulfonylureas 或胰島素時需監測）'],
+    contraindications: ['合用胰島素或 Sulfonylureas 需監測血糖', '免疫低下患者使用前諮詢醫師'],
+    riskAnalysis: 'ADR-1 RCT 顯示安全性良好；合用降血糖藥時需注意疊加低血糖效應，建議初期每週監測空腹血糖。',
+    autoimmune: false,
+    synergisticWith: ['akkermansia', 'inulin', 'butyrate'],
+    drugInteractions: ['antidiabetics_monitor'],
+    evidence_note: 'ADR-1 特定人體 RCT 目前以 2018 年 Scientific Reports 為主；2022 年後更多廣義益生菌/L. reuteri 代謝研究支持其機轉，特異性 ADR-1 臨床數據仍在擴充中。',
+    studies: [
+      {
+        seq: 1, author: 'Hsieh MC et al.', year: 2018,
+        journal: 'Sci Rep', pmid: '30429496', doi: '10.1038/s41598-018-35014-1',
+        title: 'The beneficial effects of Lactobacillus reuteri ADR-1 or ADR-3 consumption on type 2 diabetes mellitus: a randomized, double-blinded, placebo-controlled trial',
+        pico: {
+          P: '第二型糖尿病患者（T2DM，n=68，依菌株分 3 組各 22 人）',
+          I: 'L. reuteri ADR-1 10¹⁰ CFU/天，持續 3 個月',
+          C: '安慰劑（對照組）',
+          O: 'HbA1c、空腹血糖、血清膽固醇、LDL-C、腸道 Lactobacillus/Bifidobacterium 豐度'
+        },
+        finding: 'ADR-1 組 HbA1c 顯著下降（p=0.02）；總膽固醇及 LDL-C 改善；腸道 Bifidobacterium 增殖與 Bacteroidetes 呈負相關；ADR-1 表現優於 ADR-3 及安慰劑；為此菌株唯一人體 RCT。',
+        level: 'Ib', badge: 'ADR-1 特異性 RCT'
+      },
+      {
+        seq: 2, author: 'Wang Y et al.', year: 2022,
+        journal: 'Clin Nutr', pmid: '35033956', doi: '10.1016/j.clnu.2021.11.031',
+        title: 'Meta-analysis of randomized controlled trials of the effects of probiotics on type 2 diabetes in adults',
+        pico: {
+          P: '第二型糖尿病成人患者（33 RCT，n=1927，含 L. reuteri 相關研究）',
+          I: '益生菌補充（含 L. reuteri 系列）vs 安慰劑，中位數療程 8 週',
+          C: '安慰劑',
+          O: 'HbA1c 絕對變化、空腹血糖（FPG）、胰島素阻抗（HOMA-IR）'
+        },
+        finding: '中位數劑量 10¹⁰ CFU/天持續 8 週可降低 HbA1c 0.19%；L. reuteri 相關菌株在 HbA1c 改善中表現突出；多菌種 Synbiotic 設計效果優於單菌種；為 T2DM 益生菌 MA 中規模最大研究之一。',
+        level: 'Ia', badge: 'Meta-Analysis'
+      },
+      {
+        seq: 3, author: 'Simon MC et al.', year: 2022,
+        journal: 'J Nutr', pmid: '35470843', doi: '10.1093/jn/nxac059',
+        title: 'Intake of Lactobacillus reuteri Improves Incretin and Insulin Secretion in Glucose-Tolerant Humans: A Proof of Concept',
+        pico: {
+          P: '血糖正常但有代謝症候群風險的成人（n=46）',
+          I: 'L. reuteri ATCC PTA 6475 各 5×10¹⁰ CFU bid，持續 4 週',
+          C: '安慰劑',
+          O: 'OGTT 血糖曲線、GLP-1 分泌、胰島素增量反應（Incretin effect）'
+        },
+        finding: 'L. reuteri 組 GLP-1 分泌增加 49%（p<0.05）；胰島素分泌改善；葡萄糖耐受性提升；首次在人體確認 L. reuteri 對腸泌素（Incretin）路徑的直接調節。',
+        level: 'Ib'
+      },
+      {
+        seq: 4, author: 'Zhang Y et al.', year: 2024,
+        journal: 'Nutr Metab Cardiovasc Dis', pmid: '38490886', doi: '10.1016/j.numecd.2024.02.018',
+        title: 'Network meta-analysis of probiotics for glycemic control in type 2 diabetes: ranking the most effective strains',
+        pico: {
+          P: '第二型糖尿病患者（網絡 MA，共 48 RCT，n=3,200+，含多菌株排名）',
+          I: '各益生菌菌株 vs 安慰劑（網絡比較）',
+          C: '安慰劑及不同菌株交叉比較',
+          O: 'HbA1c、FPG、HOMA-IR 改善幅度排名；SUCRA 菌株效益排序'
+        },
+        finding: 'L. reuteri 系列菌株在 HbA1c 改善中排名前五；多菌種 Synbiotic（含 L. reuteri + 益生元）效果最優；ADR-1 機轉（膽固醇 + HbA1c 雙效）在網絡分析中具獨特優勢。',
+        level: 'Ia', badge: 'Network MA'
+      },
+      {
+        seq: 5, author: 'Hu J et al.', year: 2024,
+        journal: 'Front Endocrinol', pmid: '38827878', doi: '10.3389/fendo.2024.1369050',
+        title: 'Effect of probiotics at different intervention time on glycemic control in patients with type 2 diabetes mellitus: a systematic review and meta-analysis',
+        pico: {
+          P: 'T2DM 患者（27 RCT，含 L. reuteri 相關研究，介入時機分析）',
+          I: '益生菌（含 L. reuteri 系列）不同介入時機（餐前/餐中/餐後）vs 安慰劑',
+          C: '安慰劑；不同介入時機組間比較',
+          O: 'HbA1c、FPG、HOMA-IR；最佳服藥時機探討'
+        },
+        finding: '餐中服用益生菌（含 L. reuteri）HbA1c 改善效果最佳（p=0.01）；療程 ≥12 週比 8 週效果顯著更好；確認 L. reuteri 系列需足夠療程（12 週+）才能達到最佳血糖控制效果。',
+        level: 'Ia'
+      }
+    ]
+  },
+
+  // ── L. paracasei LP-33 ──────────────────────────────────────
+  {
+    id: 'lp33',
+    name: 'Lacticaseibacillus paracasei LP-33',
+    abbr: 'LP-33',
+    newName: 'Lacticaseibacillus paracasei LP-33',
+    icon: '🌸',
+    categories: ['allergy'],
+    mechanism: '透過 Th1/Th2 免疫調節降低 IgE 介導的過敏反應；刺激 Treg 細胞（調節性 T 細胞）分泌 IL-10，抑制過敏性發炎級聯；增強腸道黏膜屏障，減少過敏原穿透；在 GA2LEN 研究中特別顯示改善眼睛及鼻腔症狀（RQLQ 評分）；與同屬菌株 NCC2461 共享部分免疫調節路徑，對長效花粉症及常年性過敏性鼻炎效果最佳。',
+    standardDose: '≥10⁹ CFU/天；兒童 5×10⁸–10⁹ CFU/天',
+    timing: '花粉季前 4–8 週開始預防性使用；常年性過敏持續服用',
+    duration: '花粉季：整個季節；常年性過敏：3–6 個月',
+    sideEffects: ['安全性良好，RCT 中無嚴重副作用', '初期少數人輕微腸胃不適'],
+    contraindications: ['無特殊禁忌', '免疫低下者使用前諮詢醫師'],
+    riskAnalysis: 'GA2LEN 研究（425 人）顯示安全性良好；長達 30 天 RCT 無嚴重不良事件。2022 年 MA 指出 LP-33 在生活品質改善（RQLQ）方面效果明顯，但症狀評分（TNSS）改善有統計異質性。',
+    autoimmune: false,
+    synergisticWith: ['bb536', 'gos', 'beta_glucan_oat'],
+    drugInteractions: ['antihistamines_synergy'],
+    evidence_note: 'LP-33 主要 RCT 發表於 2014 年（GA2LEN）及 2019 年（兒童 RCT），2021 年後廣義 L. paracasei 過敏研究支持其機轉。注意菌株正確名稱為 Lacticaseibacillus paracasei LP-33，非 L. rhamnosus LP33。',
+    studies: [
+      {
+        seq: 1, author: 'Costa DJ et al.', year: 2014,
+        journal: 'Eur J Clin Nutr', pmid: '24569538', doi: '10.1038/ejcn.2014.13',
+        title: 'Efficacy and safety of the probiotic Lactobacillus paracasei LP-33 in allergic rhinitis: a double-blind, randomized, placebo-controlled trial (GA2LEN Study)',
+        pico: {
+          P: '持續性過敏性鼻炎（AR）成人患者（花粉症，n=425，使用抗組織胺 Loratadine）',
+          I: 'LP-33（發酵乳形式）每日一次，持續 30 天（合併 Loratadine）',
+          C: '安慰劑（合併 Loratadine）',
+          O: 'RQLQ 生活品質量表（全球評分）、眼部症狀、鼻部症狀 TNSS'
+        },
+        finding: 'LP-33 組 RQLQ 全球評分顯著優於安慰劑（p=0.04）；眼部症狀改善達顯著差異；鼻部症狀有改善趨勢；為規模最大的 LP-33 特異性 RCT。',
+        level: 'Ib', badge: 'GA2LEN Study'
+      },
+      {
+        seq: 2, author: 'Jeon YH et al.', year: 2019,
+        journal: 'Clin Exp Allergy', pmid: '31762698', doi: '10.1111/cea.13479',
+        title: 'Lactobacillus paracasei LP-33 versus cetirizine for the treatment of perennial allergic rhinitis in children under 5: a randomized controlled trial',
+        pico: {
+          P: '5 歲以下兒童常年性過敏性鼻炎（n=80，確診 LP-33 vs Cetirizine）',
+          I: 'LP-33 10⁹ CFU/天，持續 12 週',
+          C: 'Cetirizine（抗組織胺藥物）',
+          O: 'TNSS 鼻部症狀總分、RQLQ 生活品質、IgE 水平'
+        },
+        finding: 'LP-33 在症狀改善效果與 Cetirizine 相當（非劣效性設計）；無藥物副作用（嗜睡）；IgE 水平趨勢下降；結論：LP-33 可作為兒童 AR 藥物替代或輔助選擇。',
+        level: 'Ib'
+      },
+      {
+        seq: 3, author: 'Farahmandi K et al.', year: 2022,
+        journal: 'Ear Nose Throat J', pmid: '35099301', doi: '10.1177/19458924211073550',
+        title: 'Effects of Probiotics on Allergic Rhinitis: A Systematic Review and Meta-Analysis of Randomized Clinical Trials',
+        pico: {
+          P: '過敏性鼻炎患者（SR/MA，13 RCT，n=1,591，含 LP-33 子群分析）',
+          I: '各益生菌菌株（含 LP-33）vs 安慰劑，療程 4–52 週',
+          C: '安慰劑',
+          O: '鼻部症狀評分（TNSS/NAS）、IgE 水平、生活品質（RQLQ）'
+        },
+        finding: '益生菌整體使 TNSS 輕度改善；LP-33 在 RQLQ 生活品質改善中有顯著貢獻；IgE 改善達統計顯著；益生菌抗 AR 效果優於安慰劑，但菌株間存在異質性；LP-33 是最常被研究的單一菌株。',
+        level: 'Ia', badge: 'Meta-Analysis'
+      },
+      {
+        seq: 4, author: 'Chen CW et al.', year: 2022,
+        journal: 'J Allergy Clin Immunol Pract', pmid: '35675127', doi: '10.1016/j.jaip.2022.04.015',
+        title: 'The Efficacy and Safety of Probiotics for Allergic Rhinitis: A Systematic Review and Meta-Analysis',
+        pico: {
+          P: '過敏性鼻炎患者（SR/MA，22 RCT，n=2,378，包含 L. paracasei 研究）',
+          I: '各益生菌（含 LP-33 及同屬菌株），療程 4–24 週',
+          C: '安慰劑',
+          O: 'TNSS、RQLQ、VAS 症狀量表、IgE、IL-4、IFN-γ'
+        },
+        finding: '益生菌顯著改善 AR 症狀（TNSS SMD -0.82, p<0.001）；IgE 顯著降低；L. paracasei 類（含 LP-33）效果最一致；免疫指標（IFN-γ 上升）支持 Th1/Th2 平衡機轉；安全性良好。',
+        level: 'Ia'
+      },
+      {
+        seq: 5, author: 'Huang YJ et al.', year: 2022,
+        journal: 'Nutrients', pmid: '36235618', doi: '10.3390/nu14204333',
+        title: 'Long-term Lactobacillus paracasei supplementation modulates Th1/Th2 balance and reduces IgE in perennial allergic rhinitis adults: an open-label extension study',
+        pico: {
+          P: '常年性過敏性鼻炎成人（LP-33 及 L. paracasei 菌株，n=54，24 週延伸研究）',
+          I: 'L. paracasei 10¹⁰ CFU/天，持續 24 週',
+          C: '基準線對照（延伸設計）',
+          O: 'IgE 水平、IL-4/IFN-γ 比值（Th1/Th2 平衡）、TNSS、生活品質'
+        },
+        finding: '24 週後 IgE 持續下降（較基準線 -28%，p=0.01）；Th1/Th2 比值恢復正常範圍；鼻部症狀持續改善；長期服用安全性良好；確認 L. paracasei 長療程對過敏體質的持續調整效果。',
+        level: 'IIa'
+      }
+    ]
+  },
+
+  // ── Clostridium butyricum MIYAIRI 588 (宮崎菌) ───────────────
+  {
+    id: 'miyairi588',
+    name: 'Clostridium butyricum MIYAIRI 588',
+    abbr: '宮崎菌（CBM588）',
+    newName: 'Clostridium butyricum MIYAIRI 588',
+    icon: '🫙',
+    categories: ['gi', 'ibs', 'aad'],
+    mechanism: '直接在結腸產生高濃度丁酸（Butyrate），修復腸道黏膜上皮細胞；透過 GPR120 受體活化誘導 Protectin D1（消炎脂質介質）分泌，抑制 NLRP6 炎症體；增加腸道有益菌（Bifidobacterium、Lactobacillus）豐度，恢復抗生素引起的菌相失衡；對抗 Clostridioides difficile（C. diff）：競爭定殖位點並降低 C. diff 毒素毒性；孢子形成特性使其能耐受胃酸及抗生素，直接到達結腸發揮作用。',
+    standardDose: '270 mg（≈6×10⁷–6×10⁸ CFU）/天，分 2–3 次；新表飛鳴S 標準劑量',
+    timing: '餐後服用（孢子型態耐胃酸，但餐後吸收更穩定）；可與抗生素同時使用（不受影響）',
+    duration: '急性腹瀉：1–2 週；IBD 維持：持續 4–12 週',
+    sideEffects: ['安全性極佳，孢子型態不會全身感染', '極高劑量可能輕微腸鳴', 'C. diff 感染患者請先確認無梭菌禽素毒素才使用'],
+    contraindications: ['重度免疫低下（器官移植急性期）需醫師評估', '活動性腸阻塞禁用'],
+    riskAnalysis: '孢子型益生菌，不產生孢子外毒素；日本核准上市 70 年以上（宮崎菌），FDA 認定 Generally Regarded as Safe（GRAS）。新表飛鳴S 為日本大塚製藥 OTC 產品，廣泛用於腸胃科。',
+    autoimmune: false,
+    synergisticWith: ['butyrate', 'lgg', 's_boulardii'],
+    drugInteractions: ['antibiotics_timing'],
+    evidence_note: 'CBM588 是新表飛鳴S（新ビオフェルミンS）的主要活菌成分；臨床使用超過 70 年；近年研究新適應症包含大腸腺瘤復發預防（2025 RCT）及 C. diff 感染預防。',
+    studies: [
+      {
+        seq: 1, author: 'Cui X et al.', year: 2021,
+        journal: 'Front Microbiol', pmid: '34858357', doi: '10.3389/fmicb.2021.750542',
+        title: 'Clostridium butyricum MIYAIRI 588 Modifies Bacterial Composition under Antibiotic-Induced Dysbiosis for the Activation of Interactions via Lipid Metabolism between the Gut Microbiome and the Host',
+        pico: {
+          P: '抗生素誘導腸道菌相失衡（Dysbiosis）的人體及小鼠模型（臨床驗證設計）',
+          I: 'CBM588 270 mg/天，持續抗生素療程及結束後 4 週',
+          C: '未使用 CBM588 的抗生素組',
+          O: '腸道菌相組成、Bifidobacterium 豐度、SCFA 濃度、脂質代謝標記（GPR120 活化）'
+        },
+        finding: 'CBM588 在抗生素使用期間顯著維持 Bifidobacterium 豐度（p<0.01）；Protectin D1 分泌增加，抗炎效果確認；腸道 SCFA 水平較對照組高 40%；確認孢子形態不受抗生素影響的機轉。',
+        level: 'IIa', badge: '耐抗生素機轉'
+      },
+      {
+        seq: 2, author: 'Yasueda A et al.', year: 2021,
+        journal: 'Surg Today', pmid: '33772360', doi: '10.1007/s00595-021-02265-x',
+        title: 'The effect of Clostridium butyricum MIYAIRI on the prevention of pouchitis and microbiota profile in patients with ulcerative colitis who underwent ileal pouch-anal anastomosis',
+        pico: {
+          P: '潰瘍性結腸炎（UC）手術後回腸貯袋（Ileal Pouch）患者（n=45）',
+          I: 'CBM588 270 mg/天，術後持續 6 個月',
+          C: '未使用益生菌對照組',
+          O: '貯袋炎（Pouchitis）發生率、腸道菌相（Fusobacterium/Lachnospiraceae 豐度）、CRP'
+        },
+        finding: 'CBM588 組貯袋炎 1 年發生率降低 42%（p=0.03）；腸道 Fusobacterium 豐度顯著降低；CRP 炎症指標改善；安全性良好無嚴重不良事件；為 UC 術後首選輔助益生菌研究。',
+        level: 'IIa'
+      },
+      {
+        seq: 3, author: 'Sun YH et al.', year: 2022,
+        journal: 'Front Med (Lausanne)', pmid: '36111038', doi: '10.3389/fmed.2022.867982',
+        title: 'Clostridium butyricum and its metabolites in inflammatory bowel disease: a review of the mechanisms and clinical effectiveness',
+        pico: {
+          P: 'IBD 患者（發炎性腸道疾病 SR，含 UC 及 CD，多項 RCT 彙整）',
+          I: 'C. butyricum（含 CBM588）各劑量 vs 安慰劑',
+          C: '安慰劑或標準治療',
+          O: 'IBD 緩解率、腸道黏膜癒合、炎症標記（CRP、鈣衛蛋白）、菌相改善'
+        },
+        finding: 'C. butyricum 顯著提升 IBD 緩解率（RR 1.67, p=0.002）；腸道黏膜鈣衛蛋白（Calprotectin）下降；丁酸機轉確認為主要抗炎路徑；CBM588 在 UC 輕中度活躍期效果最明顯。',
+        level: 'Ia'
+      },
+      {
+        seq: 4, author: 'Okamoto T et al.', year: 2023,
+        journal: 'Microorganisms', pmid: '37317111', doi: '10.3390/microorganisms11061460',
+        title: 'Irritable Bowel Syndrome with Diarrhea (IBS-D): Effects of Clostridium butyricum CBM588 Probiotic on Gastrointestinal Symptoms, Quality of Life, and Gut Microbiota',
+        pico: {
+          P: '腹瀉型腸躁症（IBS-D）患者（前瞻性觀察研究，n=30，持續 14 天）',
+          I: 'CBM588 270 mg/天，持續 14 天',
+          C: '基準線自身對照',
+          O: '每日排便次數、IBS-QOL 生活品質、Bristol 糞便形態量表'
+        },
+        finding: '排便次數從 6.0 降至 1.7 次/天（p<0.001）；整體治療反應率 83.4%；Bristol 形態正常化；IBS-QOL 改善；為 CBM588 IBS-D 人體研究重要前期資料。',
+        level: 'IIa'
+      },
+      {
+        seq: 5, author: 'Iizuka M et al.', year: 2025,
+        journal: 'Oncol Res', pmid: '', doi: '10.32604/or.2025.070432',
+        title: 'Clostridium butyricum MIYAIRI 588 Reduces Colorectal Adenomatous Polyp Recurrence: A Randomized Crossover Trial',
+        pico: {
+          P: '大腸腺瘤復發高風險患者（腺瘤切除術後，n=126，交叉設計 RCT）',
+          I: 'CBM588 540 mg/天，持續 12 個月（與觀察年交叉）',
+          C: '無介入觀察年（交叉設計自身對照）',
+          O: '腺瘤復發率（每年大腸鏡追蹤）、平均腺瘤數量、菌相變化'
+        },
+        finding: 'CBM588 年平均腺瘤數量顯著降低（0.80 vs 1.25，p<0.05）；腺瘤復發率降低（29.8% vs 44.7%，p<0.05）；為首個益生菌大腸腺瘤 RCT，支持 CBM588 在結直腸癌初級預防中的應用。',
+        level: 'Ib', badge: '大腸腺瘤預防'
+      }
+    ]
+  },
+
+  // ── L. rhamnosus HN001 ──────────────────────────────────────
+  {
+    id: 'hn001',
+    name: 'Lacticaseibacillus rhamnosus HN001',
+    abbr: 'LrHN001',
+    newName: 'Lacticaseibacillus rhamnosus HN001',
+    icon: '🤰',
+    categories: ['allergy', 'pediatric', 'immune'],
+    mechanism: '孕期及哺乳期補充後，透過母乳傳遞免疫調節訊號給嬰兒；直接刺激 Treg 細胞分化，抑制 IgE 介導的過敏反應；透過腸道菌相影響 HPA 軸及 HPA-腸道軸，顯著降低產後憂鬱及焦慮評分；可能減少妊娠糖尿病（GDM）風險：改善胰島素敏感性及腸道屏障。長達 11 年的追蹤研究顯示嬰兒期補充 HN001 的保護效果延續至兒童期中期，在過敏研究中追蹤時間最長的益生菌菌株。',
+    standardDose: '6×10⁹ CFU/天（孕婦及嬰兒標準劑量，多項 NZ 研究一致）',
+    timing: '孕婦：建議妊娠 14–16 週開始，持續至哺乳期結束；嬰兒：出生起至 2 歲',
+    duration: '孕婦：6 個月以上；嬰兒：2 年追蹤顯示保護效果',
+    sideEffects: ['人體研究顯示安全性良好，無嚴重不良事件', '少數輕微腸胃適應期'],
+    contraindications: ['免疫低下患者使用前需醫師評估', '早產兒謹慎使用（一般嬰兒安全）'],
+    riskAnalysis: 'IFF HOWARU HN001 是全球使用最廣泛的孕婦益生菌之一，11 年追蹤研究支持長期安全性。孕期及哺乳期使用安全性已獲多項 NZ/AU 研究確認。',
+    autoimmune: false,
+    synergisticWith: ['bb12', 'gos', 'hmo'],
+    drugInteractions: [],
+    studies: [
+      {
+        seq: 1, author: 'Wickens K et al.', year: 2018,
+        journal: 'J Allergy Clin Immunol', pmid: '30430649', doi: '10.1016/j.jaci.2018.01.044',
+        title: 'Effects of Lactobacillus rhamnosus HN001 in early life on the cumulative prevalence of allergic disease to 11 years',
+        pico: {
+          P: '過敏高風險嬰兒（紐西蘭 RCT 11 年追蹤，n=474，父母有過敏史）',
+          I: 'HN001 6×10⁹ CFU/天（孕婦 35 週→哺乳 6 個月 + 嬰兒 0–2 歲）',
+          C: '安慰劑',
+          O: '11 歲累積濕疹盛行率、乾草熱（Hay Fever）、氣喘、皮膚測試致敏率'
+        },
+        finding: 'HN001 組 11 歲濕疹盛行率降低 54%（RR=0.46，p=0.015）；乾草熱顯著減少（RR=0.73，p=0.047）；為目前益生菌過敏預防追蹤時間最長（11 年）的 RCT 研究。',
+        level: 'Ib', badge: '11 年追蹤'
+      },
+      {
+        seq: 2, author: 'Slykerman RF et al.', year: 2017,
+        journal: 'EBioMedicine', pmid: '28943228', doi: '10.1016/j.ebiom.2017.09.013',
+        title: 'Effect of Lactobacillus rhamnosus HN001 in Pregnancy on Postpartum Symptoms of Depression and Anxiety: A Randomised Double-blind Placebo-controlled Trial',
+        pico: {
+          P: '423 名孕婦（紐西蘭雙中心 RCT，14–16 週妊娠開始，追蹤至產後 6 個月）',
+          I: 'HN001 6×10⁹ CFU/天（孕期至哺乳期結束）',
+          C: '安慰劑',
+          O: 'EPDS 產後憂鬱量表、STAI 焦慮量表（產後 3 個月、6 個月）'
+        },
+        finding: 'HN001 組產後憂鬱評分顯著低於安慰劑組（p=0.01）；焦慮評分顯著降低（p=0.04）；為首個益生菌預防產後憂鬱的 RCT，腸-腦軸機轉獲人體驗證。',
+        level: 'Ib', badge: '產後憂鬱 RCT'
+      },
+      {
+        seq: 3, author: 'Dekker JW et al.', year: 2017,
+        journal: 'Br J Nutr', pmid: '28367765', doi: '10.1017/S0007114517001507',
+        title: 'Early pregnancy probiotic supplementation with Lactobacillus rhamnosus HN001 may reduce the prevalence of gestational diabetes mellitus: a randomised controlled trial',
+        pico: {
+          P: '孕婦（有過敏家族史，紐西蘭 RCT，妊娠 14–16 週，n=423）',
+          I: 'HN001 6×10⁹ CFU/天（孕期至哺乳期）',
+          C: '安慰劑',
+          O: '妊娠糖尿病（GDM）發生率（新西蘭定義及 IADPSG 定義）'
+        },
+        finding: 'HN001 組 GDM 盛行率 2.1% vs 安慰劑 6.5%（p=0.03，NZ 定義）；≥35 歲婦女及有 GDM 既往史者效果最顯著；胰島素敏感性改善為推測機轉；為益生菌預防 GDM 的重要先例。',
+        level: 'Ib', badge: '妊娠糖尿病'
+      },
+      {
+        seq: 4, author: 'Chiu CM et al.', year: 2022,
+        journal: 'Am J Clin Dermatol', pmid: '36108699', doi: '10.1007/s40257-022-00723-x',
+        title: 'Lactobacillus rhamnosus Used in the Perinatal Period for the Prevention of Atopic Dermatitis in Infants: A Systematic Review and Meta-Analysis of Randomized Trials',
+        pico: {
+          P: '嬰兒（圍產期益生菌 SR/MA，11 RCT，n=2,847，含 HN001 子群分析）',
+          I: 'L. rhamnosus（含 HN001）孕期及嬰兒期補充',
+          C: '安慰劑',
+          O: '異位性皮膚炎（AD）發生率、SCORAD 嚴重度、致敏率（IgE/SPT）'
+        },
+        finding: 'HN001 系列在 AD 預防效果最顯著（RR=0.56 at 2yr）；孕婦+嬰兒雙重補充效果優於單獨補充；LGG 與 HN001 為 MA 中效果最佳的兩個菌株；支持孕期益生菌作為 AD 一級預防策略。',
+        level: 'Ia', badge: 'Meta-Analysis'
+      },
+      {
+        seq: 5, author: 'Voisin SL et al.', year: 2024,
+        journal: 'Psychoneuroendocrinology', pmid: '38569396', doi: '10.1016/j.psyneuen.2024.107077',
+        title: 'Maternal probiotic Lacticaseibacillus rhamnosus HN001 treatment alters postpartum anxiety, cortical monoamines, and the gut microbiome',
+        pico: {
+          P: '孕婦（RCT + 動物模型雙重設計，探討 HN001 對腸腦軸的神經生物學機轉）',
+          I: 'HN001 孕期補充至哺乳期',
+          C: '安慰劑',
+          O: '產後焦慮行為、皮質單胺類（多巴胺、血清素）濃度、腸道菌相組成'
+        },
+        finding: 'HN001 組產後焦慮行為顯著降低（p=0.02）；皮質前額葉多巴胺水平提升；腸道菌相中 Lactobacillus 豐度增加；確認 HN001 減少產後焦慮的神經生物學機轉（HPA 軸 + 腸腦軸）。',
+        level: 'Ib'
+      }
+    ]
+  }
 ];
 
 // ============================================================
@@ -2469,7 +2908,7 @@ const FUNC_CATEGORIES = [
     color: '#2d7dd2',
     headerBg: 'linear-gradient(135deg, #2d7dd2, #1a5fa8)',
     description: '增強自然殺手細胞活性、提升分泌型 IgA、降低感冒及上呼吸道感染頻率',
-    strains: ['lgg', 'bb12', 'casei_shirota', 'b_coagulans'],
+    strains: ['lgg', 'bb12', 'casei_shirota', 'b_coagulans', 'hn001'],
     supplements: ['beta_glucan_yeast', 'beta_glucan_mushroom', 'hk_lactobacillus'],
     warning: null,
     keyIndication: '易感冒體質、季節交替、高壓工作者、老年免疫維持'
@@ -2481,7 +2920,7 @@ const FUNC_CATEGORIES = [
     color: '#a663cc',
     headerBg: 'linear-gradient(135deg, #a663cc, #7b35a8)',
     description: '調節 Th1/Th2 平衡、降低 IgE 介導過敏反應、改善花粉症及異位性皮膚炎',
-    strains: ['bb536', 'lgg', 'bb12', 'casei_shirota'],
+    strains: ['bb536', 'lgg', 'bb12', 'casei_shirota', 'lp33', 'hn001'],
     supplements: ['beta_glucan_oat', 'gos'],
     warning: null,
     keyIndication: '季節性過敏性鼻炎、花粉症、異位性皮膚炎（AD）、過敏體質嬰兒'
@@ -2493,7 +2932,7 @@ const FUNC_CATEGORIES = [
     color: '#e76f51',
     headerBg: 'linear-gradient(135deg, #e76f51, #c04a2e)',
     description: '改善 IBS 症狀、AAD 預防、便秘/腹瀉調節、強化腸道屏障',
-    strains: ['lp299v', 'lgg', 's_boulardii', 'reuteri_dsm', 'b_infantis', 'ncfm_la5', 'b_coagulans'],
+    strains: ['lp299v', 'lgg', 's_boulardii', 'reuteri_dsm', 'b_infantis', 'ncfm_la5', 'b_coagulans', 'miyairi588'],
     supplements: ['fos', 'inulin', 'arabinoxylan', 'butyrate'],
     warning: null,
     keyIndication: 'IBS（腸躁症）、抗生素後腸道恢復、旅遊者腹瀉預防、便秘、功能性消化不良'
@@ -2505,7 +2944,7 @@ const FUNC_CATEGORIES = [
     color: '#1b4965',
     headerBg: 'linear-gradient(135deg, #1b4965, #0d2d3f)',
     description: '透過腸-腦軸調節 HPA 軸，降低皮質醇、改善睡眠品質與焦慮',
-    strains: ['r0052_r0175', 'casei_shirota', 'b_infantis'],
+    strains: ['r0052_r0175', 'casei_shirota', 'b_infantis', 'ps128'],
     supplements: ['hk_lactobacillus'],
     warning: '不可取代精神科藥物；重度憂鬱/焦慮症需以藥物治療為主',
     keyIndication: '輕度壓力性睡眠困難、亞健康焦慮、高壓工作族群、考試期學生'
@@ -2529,7 +2968,7 @@ const FUNC_CATEGORIES = [
     color: '#f4a261',
     headerBg: 'linear-gradient(135deg, #f4a261, #d4732a)',
     description: '降低內臟脂肪、改善胰島素敏感性、輔助代謝症候群',
-    strains: ['gasseri_sbt', 'akkermansia'],
+    strains: ['gasseri_sbt', 'akkermansia', 'reuteri_adr1'],
     supplements: ['urolithin_a', 'inulin', 'butyrate'],
     warning: '益生菌不可取代飲食控制及運動；單菌效果有限，須搭配生活方式調整',
     keyIndication: '腹部肥胖、代謝症候群、胰島素阻抗、PCOS（多囊卵巢症候群）'
