@@ -146,6 +146,9 @@
     <a href="#" onclick="showPage('compare',this)">
       <span class="icon">⚖️</span> 菌株比較表
     </a>
+    <a href="#" onclick="showPage('guide',this)">
+      <span class="icon">📖</span> 選購攻略
+    </a>
     <div class="nav-group-label">藥局管理</div>
     <a href="#" onclick="showPage('products',this)">
       <span class="icon">🏪</span> 我的產品庫
@@ -212,6 +215,11 @@
         <div class="ql-icon">🎯</div>
         <h4>功能分類</h4>
         <p>睡眠、運動、減脂、過敏等 8 大分類</p>
+      </div>
+      <div class="quick-link-card" onclick="showPage('guide',null)">
+        <div class="ql-icon">📖</div>
+        <h4>選購攻略</h4>
+        <p>9 大原則 × 16 個常見迷思破解</p>
       </div>
     </div>
   </div>
@@ -413,6 +421,141 @@
           </tbody>
         </table></div><!-- product-table-wrap -->
       </div>
+    </div>
+  </div>
+
+  <!-- 選購攻略 -->
+  <div id="page-guide" class="page">
+    <div class="page-header">
+      <h2>📖 選購攻略</h2>
+      <p>購買益生菌前必知：9 大原則 × 16 個常見迷思 × 劑量速查</p>
+    </div>
+
+    <!-- 9 大選購原則 -->
+    <h3 class="guide-section-title">✅ 9 大選購原則</h3>
+    <div class="guide-principles-grid">
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">1</span><span class="gp-title">菌株完整命名</span></div>
+        <p class="gp-desc">必須標示「屬＋種＋菌株代號」（如 <em>L. rhamnosus</em> GR-1）。單寫「乳酸菌」或「益生菌」無任何保障，無從對應臨床文獻。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">2</span><span class="gp-title">CFU 劑量明確</span></div>
+        <p class="gp-desc">≥10⁹ CFU 為腸道保健基本門檻；私密處菌株需各 ≥10⁹ CFU；腸胃道功能建議 ≥10¹⁰ CFU。注意「生產時 CFU」vs「效期內保證 CFU」的差異。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">3</span><span class="gp-title">通過第三方認證</span></div>
+        <p class="gp-desc">UL、NSF、USP、SGS 等國際認證；台灣 HACCP 及 GMP 認證。認證代表生產品質，但不等於臨床有效性——仍需看菌株文獻。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">4</span><span class="gp-title">有文獻支持的適應症</span></div>
+        <p class="gp-desc">功能宣稱要有 RCT 或 Systematic Review 支持，體外實驗（in vitro）或動物試驗不能直接推論到人體效果。查詢 PubMed 確認菌株編號。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">5</span><span class="gp-title">保存方式正確</span></div>
+        <p class="gp-desc">真空鋁箔防潮設計 ≥ 冷藏設計 ≥ 一般室溫。注意是否需從未開封即冷藏（生產端）或開封後才需冷藏；某些耐熱菌株（B. coagulans）室溫穩定性反而更高。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">6</span><span class="gp-title">腸溶包覆技術</span></div>
+        <p class="gp-desc">胃酸環境（pH 1.5–3.5）可殺滅大量活菌。腸溶膠囊或微粒包覆技術可顯著提升存活率。部分菌株（如 S. boulardii、B. coagulans）天然耐胃酸，不一定需要包覆。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">7</span><span class="gp-title">搭配益生元協同效果</span></div>
+        <p class="gp-desc">Synbiotic（益生菌 + 益生元）設計可提升定殖率 30–50%。GOS 和 FOS 是最常見搭配。注意有效劑量：GOS ≥1.72 g/日、FOS 3–5 g/日為合理範圍。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">8</span><span class="gp-title">製造履歷透明</span></div>
+        <p class="gp-desc">菌株來源、培養基、凍乾技術資訊透明為佳。大廠授權菌株（Chr. Hansen、Danisco、Institut Rosell-Lallemand）品質管控有保障，台廠使用授權菌株等同歐美品質。</p>
+      </div>
+      <div class="guide-principle-card">
+        <div class="gp-header"><span class="gp-num">9</span><span class="gp-title">對應客人的真實需求</span></div>
+        <p class="gp-desc">不同菌株適應症不重疊。腸道問題選 LGG / LP 299v；過敏選 BB536；私密處選 GR-1 + RC-14；睡眠選 R0052 + R0175；運動選 TWK10。一隻菌株不能包辦所有需求。</p>
+      </div>
+    </div>
+
+    <!-- 16 個迷思 -->
+    <h3 class="guide-section-title">❌ 16 個常見迷思破解</h3>
+    <div class="guide-myths-grid">
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 菌種越多，效果越好</div>
+        <div class="myth-right">✅ 多菌種可能彼此競爭；有文獻支持的精準菌株，勝過 20 種拼湊。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ CFU 越高越有效（10¹² 優於 10¹⁰）</div>
+        <div class="myth-right">✅ 超過有效劑量沒意義；多數研究使用 10⁹–10¹⁰ CFU 即達顯著效果。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 冷藏一定代表有活菌</div>
+        <div class="myth-right">✅ 關鍵是「生產端到保存全程」的冷鏈管理；若僅零售端冷藏，意義有限。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 吃一段時間就能永久改善腸道</div>
+        <div class="myth-right">✅ 多數菌株為「過客菌」，停用後 2–4 週逐漸消失；需持續補充。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 不用搭配益生元也可以</div>
+        <div class="myth-right">✅ Synbiotic 設計提升定殖率 30–50%；GOS、FOS 是最佳搭檔。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 吃抗生素要等療程結束才能吃益生菌</div>
+        <div class="myth-right">✅ 間隔 2 小時即可並用；療程中補充效果更好（AAD 預防）。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ S. boulardii 是細菌</div>
+        <div class="myth-right">✅ 是酵母菌（真菌）；不受抗生素影響，但會被抗黴菌藥（Fluconazole）殺滅。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 後生元（死菌）效果比活菌差</div>
+        <div class="myth-right">✅ 後生元穩定不需冷藏、不怕胃酸、免疫低下者安全——特定場景反而優於活菌。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 益生菌越貴越有效</div>
+        <div class="myth-right">✅ 效果取決於菌株研究品質，非價格；高價常反映授權成本或行銷費用。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 台灣廠商出品一定比進口好</div>
+        <div class="myth-right">✅ 關鍵是菌株來源；許多台廠使用 Chr. Hansen、Lallemand 等歐美授權菌株，品質等同原廠。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 益生菌對所有腸道問題都有效</div>
+        <div class="myth-right">✅ 不同菌株適應症不同；SIBO 患者某些益生菌可能加重症狀。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 所有人都可以自行決定服用益生菌</div>
+        <div class="myth-right">✅ 免疫低下、器官移植、化療患者使用活菌前需醫師評估（菌血症風險）。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 空腹服用效果最好</div>
+        <div class="myth-right">✅ 依菌株而異；LP 299v 建議餐前；多數菌株建議餐中/餐後（胃酸較低）。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 嬰兒不能吃益生菌</div>
+        <div class="myth-right">✅ BB-12、L. reuteri DSM 17938 等有大量嬰兒安全性研究；Cochrane 2025 支持。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 益生菌可以治療自體免疫疾病</div>
+        <div class="myth-right">✅ 僅作輔助，不可替代免疫抑制劑；重度患者使用前必須諮詢主治醫師。</div>
+      </div>
+      <div class="guide-myth-card">
+        <div class="myth-wrong">❌ 有機、天然來源的益生菌一定更好</div>
+        <div class="myth-right">✅ 益生菌效果取決於菌株編號和臨床研究，「天然」標示無法取代文獻支持。</div>
+      </div>
+    </div>
+
+    <!-- 劑量速查表 -->
+    <h3 class="guide-section-title">📊 常用益生元有效劑量速查</h3>
+    <div class="product-table-wrap">
+      <table class="dose-table" style="min-width:560px;">
+        <thead>
+          <tr><th>益生元</th><th>最低有效劑量</th><th>建議常用劑量</th><th>Bifidogenic 排名</th><th>特殊注意</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>GOS（半乳寡糖）</td><td>≥1.72 g/天</td><td>3–5 g/天</td><td>🥇 最高</td><td>SIBO 禁用</td></tr>
+          <tr><td>FOS（果寡糖）</td><td>≥3 g/天</td><td>5 g/天（最佳平衡）</td><td>🥈 高</td><td>>10 g 脹氣明顯</td></tr>
+          <tr><td>Inulin（菊糖）</td><td>≥5 g/天</td><td>5–10 g/天</td><td>🥉 中</td><td>IBS-FODMAP 族群慎用</td></tr>
+          <tr><td>Arabinoxylan</td><td>≥6 g/天</td><td>6–15 g/天</td><td>中</td><td>麥類來源，麩質敏感者確認</td></tr>
+          <tr><td>HMO（母乳寡糖）</td><td>嬰兒：1 g/L</td><td>成人：1–5 g/天</td><td>高（嬰兒）</td><td>成人研究仍在擴充中</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 

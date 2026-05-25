@@ -367,6 +367,11 @@ function renderFunctional() {
             return s ? `<li>${s.icon||'💊'} ${s.name}</li>` : '';
           }).join('')}
         </ul>
+        ${cat.selectionTips ? `
+        <div class="func-selection-tips" onclick="event.stopPropagation()">
+          <div class="fst-title">🛒 選購要點</div>
+          <ul>${cat.selectionTips.map(t=>`<li>${t}</li>`).join('')}</ul>
+        </div>` : ''}
       </div>
     </div>
   `).join('');
@@ -448,7 +453,41 @@ function openSuppDetail(id) {
 function renderInteractions() {
   const list = document.getElementById('interaction-list');
   const SEV_ICON = {beneficial:'✅', caution:'⏱️', moderate:'⚠️', avoid:'❌'};
-  list.innerHTML = DB.DRUG_INTERACTIONS.map(d => `
+
+  const abxBox = `
+    <div class="abx-quickref">
+      <h4 class="abx-qr-title">💊 抗生素期間益生菌使用速查</h4>
+      <div class="abx-qr-table-wrap">
+        <table class="dose-table abx-qr-table">
+          <thead><tr><th>益生菌類型</th><th>代表菌株</th><th>抗生素影響</th><th>建議做法</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><span class="tag tag-immune" style="font-size:11px;">酵母菌</span></td>
+              <td>S. boulardii</td>
+              <td><span class="abx-safe">✅ 不受影響</span></td>
+              <td>可與抗生素同時服用，AAD 預防首選</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-gi" style="font-size:11px;">細菌型活菌</span></td>
+              <td>LGG、BB-12、LP 299v 等</td>
+              <td><span class="abx-warn">⚠️ 可能被殺滅</span></td>
+              <td>與抗生素間隔 <b>≥2 小時</b>服用</td>
+            </tr>
+            <tr>
+              <td><span class="tag tag-allergy" style="font-size:11px;">後生元 / HK 菌</span></td>
+              <td>HK Lactobacillus、Urolithin A</td>
+              <td><span class="abx-safe">✅ 不受影響</span></td>
+              <td>免疫低下患者首選，無活菌感染風險</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-box warning" style="margin-top:10px;font-size:13px;">
+        ⚠️ <b>禁忌族群：</b>免疫低下、器官移植、化療患者 → 優先後生元；活菌製劑使用前務必諮詢主治醫師。抗黴菌藥（Fluconazole 等）可能殺滅 S. boulardii，需改用細菌型益生菌。
+      </div>
+    </div>`;
+
+  list.innerHTML = abxBox + DB.DRUG_INTERACTIONS.map(d => `
     <div class="interaction-card">
       <div class="int-header">
         <span class="interaction-severity sev-${d.severity}">${d.severityLabel}</span>

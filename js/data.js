@@ -1601,7 +1601,7 @@ const SUPPLEMENTS = [
     source: '菊苣根（Chicory root）、洋蔥、蘆筍、香蕉；工業化由蔗糖酵素法合成',
     mechanism: '在小腸不被消化酵素水解，完整到達結腸；被 Bifidobacterium 及 Lactobacillus 選擇性發酵；產生 SCFA（乙酸、丁酸、丙酸）降低結腸 pH；促進 Bifidobacterium 增殖（益生元指數高）；刺激腸道免疫相關淋巴組織（GALT）。',
     clinicalUse: ['促進 Bifidobacterium 增殖', '改善排便', '輔助鈣質吸收', '與益生菌組成協同元（Synbiotic）'],
-    standardDose: '3–8 g/天；≥10 g/天可能產生明顯脹氣',
+    standardDose: '3–8 g/天；5 g 為最佳效益/耐受平衡點（Deehan 2023）；≥10 g/天可能產生明顯脹氣',
     timing: '餐中或餐後服用，分次攝取可減少脹氣',
     duration: '持續使用維持菌相平衡',
     sideEffects: ['劑量依賴性脹氣及腸鳴', '高劑量可能腹瀉', 'SIBO 患者可能加重症狀'],
@@ -1673,7 +1673,8 @@ const SUPPLEMENTS = [
         level: 'Ib'
       }
     ],
-    synergisticWith: ['lgg', 'bb536', 'b_infantis']
+    synergisticWith: ['lgg', 'bb536', 'b_infantis'],
+    evidenceNote: '益生元 Bifidogenic 效率排名：GOS ≥ 大豆低聚糖 > FOS > IMO > XOS > Inulin。FOS 優勢在腸腦軸（焦慮/壓力）及骨質（鈣吸收）研究，與 LGG、BB536 組合為最常見 Synbiotic 設計。'
   },
 
   {
@@ -1686,7 +1687,7 @@ const SUPPLEMENTS = [
     source: '乳糖（Lactose）酵素轉化合成；人類初乳中天然存在少量',
     mechanism: '結構類似人類母乳寡糖（HMO），對嬰兒腸道特別重要；促進 Bifidobacterium longum subsp. infantis 選擇性增殖；降低腸道 pH；促進黏液素分泌強化腸道屏障；減少過敏原通透，輔助嬰兒免疫耐受建立。',
     clinicalUse: ['嬰兒腸道菌相建立（配方奶添加）', '過敏風險嬰兒的保護', '成人腸道菌相調節', '輔助鈣質吸收'],
-    standardDose: '3–10 g/天（成人）；嬰兒配方奶按比例添加（0.3–0.8 g/100 mL）',
+    standardDose: '3–10 g/天（成人）；腸道菌相調整最低有效劑量 ≥1.72 g/天；嬰兒配方奶按比例添加（0.3–0.8 g/100 mL）',
     timing: '餐中服用',
     duration: '持續使用',
     sideEffects: ['高劑量脹氣', '乳糖不耐者可能有輕微不適（成分來自乳糖但幾乎不含乳糖）'],
@@ -1758,7 +1759,8 @@ const SUPPLEMENTS = [
         level: 'Ib'
       }
     ],
-    synergisticWith: ['bb12', 'b_infantis', 'lgg']
+    synergisticWith: ['bb12', 'b_infantis', 'lgg'],
+    evidenceNote: 'GOS 是目前 Bifidogenic 效率排名最高的益生元；結構類似 HMO，對嬰兒腸道和成人免疫均有充足文獻。3.5 g/天即可改善 IBS（Dahl 2023）；嬰兒使用安全性獲 Cochrane 2023 支持。'
   },
 
   {
@@ -1771,7 +1773,7 @@ const SUPPLEMENTS = [
     source: '菊苣根（Chicory，最主要商業來源）、菊芋（Jerusalem artichoke）、大蒜、洋蔥',
     mechanism: '聚合度（Degree of Polymerization, DP）較 FOS 高（DP 2–60）；緩慢發酵至結腸遠端，效益延伸至整個結腸；選擇性促進 Bifidobacterium 及 Faecalibacterium prausnitzii 增殖；長鏈 Inulin（Inulin HP）促進較多丙酸（Propionate）產生，有益代謝；增強鈣、鎂吸收。',
     clinicalUse: ['整個結腸菌相調節', '脂肪代謝輔助（丙酸效應）', '骨密度輔助（增強鈣吸收）', '血糖調節輔助'],
-    standardDose: '5–15 g/天；建議從 5 g 開始逐漸增加',
+    standardDose: '5–15 g/天；建議從 5 g 開始逐漸增加；菊苣來源（Chicory-derived）品質最穩定',
     timing: '分次攝取，餐中服用',
     duration: '持續使用',
     sideEffects: ['明顯脹氣及腸鳴（尤其初期）', '高劑量腹瀉', 'IBS 患者需謹慎（FODMAP）'],
@@ -2542,7 +2544,14 @@ const FUNC_CATEGORIES = [
     strains: ['rc14_gr1'],
     supplements: [],
     warning: null,
-    keyIndication: '反覆細菌性陰道炎（BV）、念珠菌感染（VVC）、陰道微生態失衡、抗生素後復發預防'
+    keyIndication: '反覆細菌性陰道炎（BV）、念珠菌感染（VVC）、陰道微生態失衡、抗生素後復發預防',
+    selectionTips: [
+      '確認菌株完整命名：L. rhamnosus GR-1 ＋ L. reuteri RC-14（非單純「乳酸菌」）',
+      '各菌株劑量各 ≥10⁹ CFU（複方總量 ≥2×10⁹）',
+      '蔓越莓 PAC ≥36 mg/日可協同預防泌尿道感染（UTI）',
+      'D-甘露糖（D-Mannose）2 g/日可加強對抗大腸桿菌黏附',
+      '療程建議連續服用 ≥12 週；抗生素後立即補充效果最佳'
+    ]
   },
   {
     id: 'autoimmune',
