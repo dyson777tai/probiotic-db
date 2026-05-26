@@ -1762,6 +1762,113 @@ const STRAINS = [
         level: 'Ib'
       }
     ]
+  },
+
+  {
+    id: 'reuteri_dsm17648',
+    name: 'Limosilactobacillus reuteri DSM 17648',
+    abbr: 'DSM 17648',
+    newName: 'Limosilactobacillus reuteri DSM 17648',
+    brandName: 'Pylopass™',
+    family: 'Lactobacillaceae',
+    icon: '🎯',
+    categories: ['gi'],
+    mechanism: '全球首株商業化後生元（Postbiotic）形式益生菌，品牌名 Pylopass™（Lonza 專利）。核心機轉為物理性共聚集（Co-aggregation）：細胞表面層蛋白（Surface Layer Protein, SLP）特異性識別幽門螺旋桿菌（Helicobacter pylori, H. pylori）表面的血型抗原結合黏附素（Blood Group Antigen-binding Adhesin, BabA）及唾液酸結合黏附素（Sialic Acid-binding Adhesin, SabA），形成細菌間異聚合物，阻斷 H. pylori 黏附胃上皮 Lewis b 血型抗原及唾液酸-Lewis X（Sialyl-Lewis X）抗原；混合聚集體隨消化道蠕動排出，降低胃內 H. pylori 負荷量（13C 尿素呼氣試驗可量化確認）。此機轉為純物理結合，無需代謝活性，死菌（熱殺滅或噴霧乾燥）即可發揮相同效果，因此能以非活菌（後生元）形式穩定商業化。次要機轉：可產生 Reuterin（3-羥基丙醛，3-Hydroxypropionaldehyde, 3-HPA）對 H. pylori 具直接抑菌作用；降低促炎細胞激素 TNF-α 及 IL-8；提升抗炎因子 IL-10；與 Clarithromycin、Amoxicillin 等根除抗生素協同，進一步提升根除率。本菌株為從 700 餘株野生型乳桿菌（Lactobacillus spp.）篩選出對 H. pylori 親和力最高者。',
+    standardDose: '後生元（Pylopass™）：200 mg BID（每日兩次），與根除療程同步進行 14 天 + 療程後追加 14 天｜活菌形式（若使用）：5×10⁸–10⁹ CFU/天',
+    timing: '餐前或餐中服用皆可（物理共聚集機轉不受胃酸降解影響）；與 PPI（質子幫浦抑制劑）及抗生素同步使用',
+    duration: '建議與標準根除療法（7–14 天）同步開始，根除療程結束後再持續 14 天，以清除殘餘 H. pylori',
+    sideEffects: ['整體不良反應率與安慰劑相近（<5%）', '偶發輕微腹脹、軟便（初期 3–5 天）', '後生元（非活菌）形式不良反應發生率最低'],
+    contraindications: ['不可單獨用於 H. pylori 根除，必須與標準抗生素根除療法合用', '嚴重免疫缺損患者避免活菌形式（後生元形式較安全）', '對乳製品過敏者須確認劑型成分'],
+    autoimmune: false,
+    riskAnalysis: '後生元（非活菌）Pylopass™ 安全性優異，不涉及活菌定殖風險，適合免疫低下族群（化療中、器官移植、長期免疫抑制劑使用者）；不影響正常腸道菌群結構，使用後不需擔心菌種失衡。與 S. boulardii 不同，本品不受抗真菌藥影響，使用範圍更廣。活菌形式安全性比照一般益生菌注意事項。',
+    drugInteractions: ['antibiotics_timing', 'immunosuppressants_caution'],
+    synergisticWith: ['s_boulardii', 'fos'],
+    studies: [
+      {
+        seq: 1, author: 'Tanashat M et al.', year: 2025,
+        journal: 'Clin Nutr ESPEN', pmid: '39642994',
+        doi: '10.1016/j.clnesp.2024.11.016',
+        title: 'Efficacy of probiotics regimens for H. pylori eradication: SR, pairwise and network meta-analysis of RCTs',
+        pico: {
+          P: 'H. pylori 感染成人（網絡統合分析，納入多個 RCT，比較多種益生菌方案）',
+          I: '各類益生菌方案（含 L. reuteri DSM 17648）輔助 H. pylori 根除療法',
+          C: '標準根除療法單用（三聯或四聯療法）',
+          O: 'H. pylori 根除率、消化道副作用發生率、治療依從性'
+        },
+        finding: '益生菌輔助顯著提升根除率（OR 1.96）；L. reuteri 系列於網絡統合排名最優；腹瀉、噁心等副作用顯著降低；Cochrane 偏倚風險評估為低偏倚',
+        level: 'Ia', badge: 'Network MA'
+      },
+      {
+        seq: 2, author: 'Mishra V et al.', year: 2024,
+        journal: 'Helicobacter', pmid: '39722187',
+        doi: '10.1111/hel.70006',
+        title: 'Efficacy of Lactobacillus spp. Supplementation in H. pylori Eradication: Systematic Meta-Analysis with TSA',
+        pico: {
+          P: 'H. pylori 陽性成人，接受標準根除療法',
+          I: 'Lactobacillus 屬補充（含 L. reuteri DSM 17648）作為輔助治療',
+          C: '標準根除療法 + 安慰劑',
+          O: 'H. pylori 根除率（ITT 及 PP）；消化道不良反應發生率'
+        },
+        finding: 'Lactobacillus 輔助顯著提升根除率；GI 副作用降低；GRADEpro 評定高確信度（High Certainty）；序列試驗分析（Trial Sequential Analysis, TSA）確認結果穩健',
+        level: 'Ia', badge: 'SR+MA'
+      },
+      {
+        seq: 3, author: 'Li M et al.', year: 2024,
+        journal: 'Therap Adv Gastroenterol', pmid: '38846173',
+        doi: '10.1177/17562848241258021',
+        title: 'L. reuteri vs. placebo as adjuvant in H. pylori eradication therapy: meta-analysis of RCTs',
+        pico: {
+          P: 'H. pylori 感染成人（8 項 RCT，n=1,087）',
+          I: 'L. reuteri（含 DSM 17648 等菌株）輔助 H. pylori 根除療法',
+          C: '安慰劑 + 標準根除療法',
+          O: 'ITT 及 PP 根除率；抗生素相關副作用；腸胃道症狀改善'
+        },
+        finding: 'ITT 根除率 80.0% vs 72.6%（p=0.005）；PP 根除率亦顯著較高；腹瀉、噁心等抗生素相關副作用降低；腸胃道症狀明顯改善（治療依從性提升）',
+        level: 'Ia', badge: 'MA'
+      },
+      {
+        seq: 4, author: 'Ivashkin V et al.', year: 2024,
+        journal: 'Clin Transl Gastroenterol', pmid: '39023173',
+        doi: '10.14309/ctg.0000000000000750',
+        title: 'Postbiotic Inactivated L. reuteri DSM17648 as Adjuvant in H. pylori Eradication in Functional Dyspepsia: RCT',
+        pico: {
+          P: 'H. pylori 陽性合併功能性消化不良（Functional Dyspepsia, FD）成人患者（多中心 RCT，俄羅斯，ISRCTN20716052）',
+          I: '非活菌 L. reuteri DSM17648（Pylopass™）200 mg BID × 14 天（配合根除療程）＋療程結束後再 14 天',
+          C: '安慰劑 + 標準三聯根除療法',
+          O: 'H. pylori 根除率（¹³C 尿素呼氣試驗確認）；消化道不良反應；FD 症狀評分'
+        },
+        finding: '根除率 96.7% vs 86.0%（p=0.039）；消化道不良反應（腹脹、腹痛）顯著減少；FD 症狀評分顯著改善；確認非活菌（後生元）形式同樣有效，可安全應用於免疫低下族群',
+        level: 'Ib', badge: 'RCT'
+      },
+      {
+        seq: 5, author: 'Ismail NA et al.', year: 2023,
+        journal: 'Helicobacter', pmid: '37614081',
+        doi: '10.1111/hel.13017',
+        title: 'Probiotic L. reuteri DSM 17648 as adjunct treatment for H. pylori infection: RCT',
+        pico: {
+          P: '未曾治療過的 H. pylori 陽性患者（n=90，馬來西亞，NCT05399862）',
+          I: 'L. reuteri DSM 17648 × 4 週（標準三聯療法 2 週後開始服用）',
+          C: '安慰劑（完成標準三聯療法後）',
+          O: 'H. pylori 根除率；GI 副作用（頭痛、腹痛）；GSRS 腸胃症狀量表評分'
+        },
+        finding: '根除率 91.1% vs 68.9%（p=0.007）；頭痛 0% vs 15.6%（p=0.012）；腹痛 0% vs 13.3%（p=0.026）；GSRS 消化不良、腹痛、便秘及總分均顯著改善',
+        level: 'Ib', badge: 'RCT'
+      },
+      {
+        seq: 6, author: 'Naghibzadeh N et al.', year: 2022,
+        journal: 'BMC Gastroenterol', pmid: '35255819',
+        doi: '10.1186/s12876-022-02187-z',
+        title: 'Quadruple therapy + S. boulardii or L. reuteri DSMZ 17648 for H. pylori eradication: double-blind RCT',
+        pico: {
+          P: 'H. pylori 感染成人（n=156，三臂設計，伊朗）',
+          I: '四聯療法（PPI + 鉍次枸櫞酸鉍 + Clarithromycin + Amoxicillin）+ L. reuteri DSMZ 17648 × 2 週',
+          C: '四聯療法 + S. boulardii（正向對照）vs 四聯療法單用（控制組）',
+          O: 'H. pylori 根除率；腹脹、腹瀉、噁心等副作用發生率；療程依從性'
+        },
+        finding: 'L. reuteri DSMZ 17648 組根除率高於控制組；L. reuteri 組腹脹改善優於 S. boulardii 組；三組副作用均在可接受範圍；益生菌輔助提升療程依從性',
+        level: 'Ib', badge: 'RCT'
+      }
+    ]
   }
 ];
 
