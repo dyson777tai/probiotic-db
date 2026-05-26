@@ -3249,6 +3249,24 @@ const SYNBIOTIC_COMBOS = [
 ];
 
 // ============================================================
+//  SEED_PRODUCTS  藥局預設產品（每次版本升級自動補入新品）
+// ============================================================
+const SEED_PRODUCTS = [
+  {
+    id: 10001,
+    name: '鍾根堂 Frilacto 益生菌粉包',
+    brand: '鍾根堂（CKD Pharm，韓國）',
+    strains: [],
+    category: 'immune',
+    cfu: '100億 CFU／包',
+    price: '',
+    note: '17種益生菌（Rosell® 認證菌株）；含維他命D3 400IU + 鋅8.5mg；2g粉包×30包；另含藍莓粉末、有機薑粉'
+  }
+];
+
+const SEED_VERSION = 'v1';
+
+// ============================================================
 //  全域匯出供 app.js 使用
 // ============================================================
-const DB = { STRAINS, SUPPLEMENTS, DRUG_INTERACTIONS, FUNC_CATEGORIES, SYNBIOTIC_COMBOS };
+const DB = { STRAINS, SUPPLEMENTS, DRUG_INTERACTIONS, FUNC_CATEGORIES, SYNBIOTIC_COMBOS, SEED_PRODUCTS, SEED_VERSION };

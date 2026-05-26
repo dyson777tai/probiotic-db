@@ -667,7 +667,19 @@ function exportProducts() {
 // ============================================================
 //  初始化
 // ============================================================
+function seedProducts() {
+  const seededVer = localStorage.getItem('probiotic_seed_ver');
+  if (seededVer === DB.SEED_VERSION) return;
+  const existingIds = new Set(PRODUCTS.map(p => p.id));
+  DB.SEED_PRODUCTS.forEach(p => {
+    if (!existingIds.has(p.id)) PRODUCTS.push(p);
+  });
+  localStorage.setItem('probiotic_products', JSON.stringify(PRODUCTS));
+  localStorage.setItem('probiotic_seed_ver', DB.SEED_VERSION);
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+  seedProducts();
   renderStrains(DB.STRAINS);
   renderHomeStats();
   const userEl = document.getElementById('sidebar-user');
