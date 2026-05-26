@@ -6,6 +6,12 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2d9b6f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="益生菌大補帖">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
   <title>益生菌資料庫｜小戴藥局</title>
   <link rel="stylesheet" href="css/style.css?v=2.1">
   <style>
@@ -600,5 +606,10 @@
 <script>requireAuth();</script>
 <script src="js/data.js?v=2.1"></script>
 <script src="js/app.js?v=2.1"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/probiotic-db/sw.js');
+  }
+</script>
 </body>
 </html>

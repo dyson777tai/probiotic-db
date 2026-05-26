@@ -1,0 +1,26 @@
+{
+  "name": "益生菌大補帖",
+  "short_name": "益生菌",
+  "description": "小戴藥局益生菌資料庫｜菌株百科、客戶配對、藥物交互",
+  "start_url": "/probiotic-db/login.html",
+  "scope": "/probiotic-db/",
+  "display": "standalone",
+  "background_color": "#1a2e24",
+  "theme_color": "#2d9b6f",
+  "orientation": "any",
+  "lang": "zh-TW",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
